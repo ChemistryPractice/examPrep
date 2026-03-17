@@ -1001,6 +1001,333 @@
                 correct: "83 mL",
                 exp: "Use M1V1 = M2V2: (12.0 M)(V1) = (0.50 M)(2.0 L). V1 = 0.0833 L, which is 83.3 mL."
             }
+            // --- CONCENTRATION UNITS ---
+            {
+                q: "What is the molarity of a solution containing 10.0 g of KOH (MM = 56.1) in 250. mL of solution?",
+                options: ["0.713 M", "0.178 M", "0.040 M", "1.78 M"],
+                correct: "0.713 M",
+                exp: "(10.0 g / 56.1 g/mol) = 0.1782 mol. 0.1782 mol / 0.250 L = 0.713 M."
+            },
+            {
+                q: "To prepare 500. mL of 0.200 M HCl from a 12.0 M stock solution, what volume of stock is needed?",
+                options: ["8.33 mL", "12.0 mL", "4.17 mL", "1.20 mL"],
+                correct: "8.33 mL",
+                exp: "M1V1 = M2V2. (12.0)V1 = (0.200)(500). V1 = 8.33 mL."
+            },
+            {
+                q: "Which concentration unit is independent of temperature?",
+                options: ["Molality", "Molarity", "Volume Percent", "Normality"],
+                correct: "Molality",
+                exp: "Molality is moles per kg of solvent. Mass does not change with temperature, whereas volume (molarity) does."
+            },
+            {
+                q: "What is the mole fraction of ethanol (C₂H₅OH) in a solution of 46 g ethanol and 54 g water?",
+                options: ["0.25", "0.46", "0.50", "0.33"],
+                correct: "0.25",
+                exp: "46g EtOH = 1.0 mol. 54g H₂O = 3.0 mol. X = 1.0 / (1.0 + 3.0) = 0.25."
+            },
+
+            // --- HENRY'S LAW ---
+            {
+                q: "The solubility of a gas in a liquid is 0.15 g/L at 1.0 atm. What is its solubility at 3.5 atm?",
+                options: ["0.53 g/L", "0.043 g/L", "0.15 g/L", "0.45 g/L"],
+                correct: "0.53 g/L",
+                exp: "Henry's Law (S1/P1 = S2/P2). 0.15 / 1.0 = S2 / 3.5. S2 = 0.525 g/L."
+            },
+            {
+                q: "Which change typically increases the solubility of a GAS in a liquid?",
+                options: ["Increasing pressure and decreasing temperature", "Decreasing pressure and increasing temperature", "Increasing pressure and increasing temperature", "Decreasing pressure and decreasing temperature"],
+                correct: "Increasing pressure and decreasing temperature",
+                exp: "Gases are more soluble under high pressure (Henry's Law) and in cold liquids."
+            },
+
+            // --- RAOULT'S LAW & VAPOR PRESSURE ---
+            {
+                q: "Pure water has a vapor pressure of 23.8 torr. What is the vapor pressure of a solution where the mole fraction of water is 0.900?",
+                options: ["21.4 torr", "2.38 torr", "23.8 torr", "26.4 torr"],
+                correct: "21.4 torr",
+                exp: "P_soln = X_solvent * P_pure. (0.900)(23.8) = 21.4 torr."
+            },
+            {
+                q: "Which solution will have the lowest vapor pressure?",
+                options: ["0.10 M AlCl₃", "0.10 M NaCl", "0.10 M MgCl₂", "0.10 M Glucose"],
+                correct: "0.10 M AlCl₃",
+                exp: "Vapor pressure lowering is a colligative property. AlCl₃ has the most ions (i=4), causing the largest decrease."
+            },
+
+            // --- CLAUSIUS-CLAPEYRON ---
+            {
+                q: "The Clausius-Clapeyron equation relates which two variables?",
+                options: ["Vapor Pressure and Temperature", "Solubility and Pressure", "Volume and Temperature", "Boiling Point and Molarity"],
+                correct: "Vapor Pressure and Temperature",
+                exp: "It describes the non-linear relationship: ln(P) vs 1/T."
+            },
+            {
+                q: "A plot of ln(P_vap) vs. 1/T (Kelvin) yields a straight line with a slope equal to:",
+                options: ["-ΔH_vap / R", "ΔH_vap", "-R / ΔH_vap", "ΔS / R"],
+                correct: "-ΔH_vap / R",
+                exp: "Based on the linear form: ln(P) = (-ΔH_vap/R)(1/T) + C."
+            },
+
+            // --- COLLIGATIVE: FREEZING & BOILING ---
+            {
+                q: "What is the freezing point of a 0.50 m aqueous solution of NaCl? (Kf = 1.86 °C/m)",
+                options: ["-1.86 °C", "-0.93 °C", "0.00 °C", "-3.72 °C"],
+                correct: "-1.86 °C",
+                exp: "ΔTf = i * Kf * m. For NaCl, i=2. ΔTf = 2 * 1.86 * 0.50 = 1.86. Freezing point = 0 - 1.86 = -1.86 °C."
+            },
+            {
+                q: "Which has the highest boiling point?",
+                options: ["0.1 m Na₂SO₄", "0.1 m NaCl", "0.1 m Glucose", "0.1 m AlCl₃"],
+                correct: "0.1 m AlCl₃",
+                exp: "i-factors: Na₂SO₄=3, NaCl=2, Glucose=1, AlCl₃=4. Highest i = highest boiling point."
+            },
+            {
+                q: "How many grams of ethylene glycol (MM=62) are needed to lower the freezing point of 1 kg of water by 18.6 °C? (Kf = 1.86)",
+                options: ["620 g", "62 g", "186 g", "310 g"],
+                correct: "620 g",
+                exp: "ΔTf = i*Kf*m. 18.6 = 1 * 1.86 * m. m = 10. 10 moles * 62 g/mol = 620 g."
+            },
+
+            // --- OSMOTIC PRESSURE ---
+            {
+                q: "What is the osmotic pressure (Π) of a 0.10 M glucose solution at 25 °C?",
+                options: ["2.45 atm", "0.205 atm", "24.5 atm", "1.00 atm"],
+                correct: "2.45 atm",
+                exp: "Π = iMRT. (1)(0.10)(0.0821)(298) = 2.45 atm."
+            },
+            {
+                q: "Osmosis is the flow of solvent through a semipermeable membrane from:",
+                options: ["Low solute concentration to high", "High solute concentration to low", "High pressure to low pressure", "Solute to solvent"],
+                correct: "Low solute concentration to high",
+                exp: "Solvent moves to 'dilute' the more concentrated side."
+            },
+
+            // --- COLLOIDS & IDEAL SOLUTIONS ---
+            {
+                q: "The Tyndall effect is used to distinguish between a solution and a:",
+                options: ["Colloid", "Compound", "Pure substance", "Isotope"],
+                correct: "Colloid",
+                exp: "Colloids scatter light; true solutions do not."
+            },
+            {
+                q: "An ideal solution is one where:",
+                options: ["ΔH_mixing = 0", "ΔV_mixing > 0", "Intermolecular forces increase", "The solute is a gas"],
+                correct: "ΔH_mixing = 0",
+                exp: "In an ideal solution, A-B interactions are identical to A-A and B-B interactions."
+            },
+
+            // --- MORE RAOULT'S LAW ---
+            {
+                q: "Benzene (P°=100) and Toluene (P°=30) are mixed in equal molar amounts. What is the total vapor pressure?",
+                options: ["65 torr", "130 torr", "70 torr", "50 torr"],
+                correct: "65 torr",
+                exp: "P_total = (0.5 * 100) + (0.5 * 30) = 50 + 15 = 65 torr."
+            },
+            {
+                q: "If a solution shows a positive deviation from Raoult's Law, it means:",
+                options: ["A-B attractions are weaker than A-A/B-B", "A-B attractions are stronger than A-A/B-B", "The ΔH_mix is negative", "The solution is cooling down"],
+                correct: "A-B attractions are weaker than A-A/B-B",
+                exp: "Molecules escape to the gas phase more easily than expected."
+            },
+
+            // --- IONIC STRENGTH & VAN'T HOFF ---
+            {
+                q: "What is the van't Hoff factor (i) for a dilute solution of Mg₃(PO₄)₂?",
+                options: ["5", "2", "3", "7"],
+                correct: "5",
+                exp: "Dissociates into 3 Mg²⁺ and 2 PO₄³⁻ ions. Total = 5."
+            },
+            {
+                q: "As a solution becomes more concentrated, the observed van't Hoff factor (i) usually:",
+                options: ["Decreases", "Increases", "Stays the same", "Becomes zero"],
+                correct: "Decreases",
+                exp: "Ion pairing occurs in concentrated solutions, reducing the effective number of particles."
+            },
+
+            // --- FRACTIONAL DISTILLATION ---
+            {
+                q: "In a fractional distillation of two volatile liquids, the vapor is always richer in:",
+                options: ["The more volatile component", "The less volatile component", "The component with the higher molar mass", "The component with the higher boiling point"],
+                correct: "The more volatile component",
+                exp: "The component with the higher vapor pressure (lower BP) evaporates more readily."
+            },
+
+            // --- MASS PERCENT & PPM ---
+            {
+                q: "A solution is 5.0% NaCl by mass. How many grams of NaCl are in 200. g of solution?",
+                options: ["10. g", "5.0 g", "40. g", "2.5 g"],
+                correct: "10. g",
+                exp: "200 * 0.05 = 10 g."
+            },
+            {
+                q: "A water sample contains 2.0 mg of Fluoride in 1.0 kg of water. What is the concentration in ppm?",
+                options: ["2.0 ppm", "0.2 ppm", "20 ppm", "200 ppm"],
+                correct: "2.0 ppm",
+                exp: "ppm = (mg solute / kg solution). 2.0 mg / 1.0 kg = 2.0 ppm."
+            },
+
+            // --- THERMODYNAMICS OF SOLUTIONS ---
+            {
+                q: "When NaOH dissolves in water, the solution gets hot. This indicates that:",
+                options: ["ΔH_soln is negative", "ΔH_soln is positive", "ΔS_soln is negative", "The process is non-spontaneous"],
+                correct: "ΔH_soln is negative",
+                exp: "Exothermic processes release heat (negative enthalpy)."
+            },
+            {
+                q: "The 'Like Dissolves Like' rule refers to matching which property?",
+                options: ["Polarity", "Molar Mass", "Density", "Boiling Point"],
+                correct: "Polarity",
+                exp: "Polar solvents dissolve polar/ionic solutes; nonpolar solvents dissolve nonpolar solutes."
+            },
+
+            // --- MISCELLANEOUS COLLIGATIVE ---
+            {
+                q: "Which would be the most effective 'de-icer' for roads on a per-gram basis?",
+                options: ["NaCl", "CaCl₂", "MgCl₂", "C₁₂H₂₂O₁₁ (Sucrose)"],
+                correct: "NaCl",
+                exp: "While CaCl₂ has more ions, NaCl has a much lower molar mass, providing more moles (and thus more particles) per gram of salt."
+            },
+            {
+                q: "Calculate the molality of a solution containing 3.0 mol of solute in 500. g of water.",
+                options: ["6.0 m", "1.5 m", "0.5 m", "3.0 m"],
+                correct: "6.0 m",
+                exp: "3.0 mol / 0.500 kg = 6.0 m."
+            },
+            {
+                q: "What is the molar mass of a non-electrolyte if 10.0 g in 100. g water (Kf=1.86) freezes at -1.86 °C?",
+                options: ["100 g/mol", "10 g/mol", "186 g/mol", "50 g/mol"],
+                correct: "100 g/mol",
+                exp: "ΔTf = 1.86. Kf = 1.86. So molality = 1.0. 1.0 mol/kg * 0.1 kg = 0.1 mol. 10g / 0.1 mol = 100 g/mol."
+            },
+
+            // --- PHASE DIAGRAMS & SOLUTIONS ---
+            {
+                q: "Adding a non-volatile solute to a solvent ______ the triple point pressure.",
+                options: ["Decreases", "Increases", "Does not change", "Eliminates"],
+                correct: "Decreases",
+                exp: "The entire vapor pressure curve shifts downward."
+            },
+            {
+                q: "What is the osmotic pressure of 0.10 M NaCl at 273 K?",
+                options: ["4.48 atm", "2.24 atm", "1.12 atm", "0.10 atm"],
+                correct: "4.48 atm",
+                exp: "Π = iMRT = (2)(0.10)(0.0821)(273) = 4.48 atm."
+            },
+            {
+                q: "Which concentration unit changes if the solution is heated from 20 °C to 50 °C?",
+                options: ["Molarity", "Molality", "Mole Fraction", "Mass Percent"],
+                correct: "Molarity",
+                exp: "Volume expands when heated, decreasing the molarity."
+            },
+            {
+                q: "A saturated solution is one where:",
+                options: ["Dissolved and undissolved solute are in equilibrium", "No more solute can be added even if heated", "The solvent is boiling", "The solute is purely ionic"],
+                correct: "Dissolved and undissolved solute are in equilibrium",
+                exp: "The rate of dissolution equals the rate of crystallization."
+            },
+            {
+                q: "Which gas is MOST soluble in water?",
+                options: ["NH₃", "O₂", "N₂", "He"],
+                correct: "NH₃",
+                exp: "NH₃ is polar and can hydrogen bond with water, making it extremely soluble compared to nonpolar gases."
+            },
+            {
+                q: "What is the mass of water in 500. g of a 10.0% by mass glucose solution?",
+                options: ["450. g", "50.0 g", "400. g", "500. g"],
+                correct: "450. g",
+                exp: "10% is glucose (50g), so 90% is water (450g)."
+            },
+            {
+                q: "The boiling point of a solution is 101.04 °C. What is the molality? (Kb = 0.52)",
+                options: ["2.0 m", "1.0 m", "0.5 m", "4.0 m"],
+                exp: "ΔTb = 1.04. ΔTb = i*Kb*m. Assuming i=1, 1.04 = 0.52 * m. m = 2.0.",
+                correct: "2.0 m"
+            },
+            {
+                q: "In the Clausius-Clapeyron equation, temperature must be in:",
+                options: ["Kelvin", "Celsius", "Fahrenheit", "Any units"],
+                correct: "Kelvin",
+                exp: "All gas and thermodynamic laws require absolute temperature (Kelvin)."
+            },
+            {
+                q: "If a solute is highly soluble in water, its ΔH_soln is likely:",
+                options: ["Exothermic or slightly endothermic", "Highly endothermic", "Zero", "Always positive"],
+                correct: "Exothermic or slightly endothermic",
+                exp: "Strong solute-solvent attractions (exothermic) drive solubility."
+            },
+            {
+                q: "What happens to the boiling point of a solvent when a non-volatile solute is added?",
+                options: ["It increases", "It decreases", "It stays the same", "It depends on the density"],
+                correct: "It increases",
+                exp: "Boiling point elevation is a result of vapor pressure lowering."
+            },
+            {
+                q: "Which ion is most likely to cause a deviation from ideal van't Hoff factors?",
+                options: ["Mg²⁺", "Na⁺", "K⁺", "Cl⁻"],
+                correct: "Mg²⁺",
+                exp: "Higher charged ions (like +2) exhibit stronger ion-pairing, reducing 'i'."
+            },
+            {
+                q: "A solution is prepared by mixing 1 mole of A and 3 moles of B. What is the mole fraction of B?",
+                options: ["0.75", "0.25", "3.0", "1.33"],
+                correct: "0.75",
+                exp: "3 / (1+3) = 0.75."
+            },
+            {
+                q: "Which property is NOT colligative?",
+                options: ["Surface Tension", "Freezing Point", "Vapor Pressure", "Osmotic Pressure"],
+                correct: "Surface Tension",
+                exp: "Surface tension depends on the identity of the substance, not the number of particles."
+            },
+            {
+                q: "Calculate the molarity of 1.0 g of NaCl in 1.0 L of solution.",
+                options: ["0.017 M", "0.17 M", "1.0 M", "0.058 M"],
+                correct: "0.017 M",
+                exp: "1.0g / 58.5g/mol = 0.017 mol. 0.017 mol / 1.0 L = 0.017 M."
+            },
+            {
+                q: "Which aqueous solution has the lowest freezing point?",
+                options: ["0.5 m MgCl₂", "0.5 m NaCl", "0.5 m Glucose", "1.0 m Glucose"],
+                correct: "0.5 m MgCl₂",
+                exp: "i*m values: MgCl₂=(3*0.5)=1.5; NaCl=(2*0.5)=1.0; Glucose=0.5; 1.0 Glucose=1.0. Highest i*m = lowest FP."
+            },
+            {
+                q: "What is the molality of a 10.0% NaOH solution? (MM=40.0)",
+                options: ["2.78 m", "2.50 m", "0.25 m", "1.11 m"],
+                correct: "2.78 m",
+                exp: "10g NaOH (0.25 mol) in 90g water (0.090 kg). 0.25 / 0.090 = 2.78 m."
+            },
+            {
+                q: "Henry's Law constant (k) depends on:",
+                options: ["The identity of the gas and solvent", "The volume of the container", "The rate of stirring", "The amount of light"],
+                correct: "The identity of the gas and solvent",
+                exp: "Each gas-solvent pair has a unique k value at a given temperature."
+            },
+            {
+                q: "A solution is 2 ppm by mass. This is equivalent to:",
+                options: ["2 mg/kg", "2 g/kg", "2 mg/g", "2 μg/kg"],
+                correct: "2 mg/kg",
+                exp: "1 ppm = 1 part in 1,000,000. 1 mg in 1,000,000 mg (1 kg)."
+            },
+            {
+                q: "If 0.10 moles of K₂SO₄ are dissolved in 1.0 kg water, how many moles of ions are present?",
+                options: ["0.30 mol", "0.10 mol", "0.20 mol", "0.40 mol"],
+                correct: "0.30 mol",
+                exp: "K₂SO₄ -> 2K⁺ + SO₄²⁻. (3 ions total). 0.10 * 3 = 0.30."
+            },
+            {
+                q: "The units of the freezing point depression constant (Kf) are:",
+                options: ["°C/m", "°C/M", "m/°C", "°C"],
+                correct: "°C/m",
+                exp: "Derived from ΔTf = Kf * m."
+            },
+            {
+                q: "What is the molarity of pure water? (Density = 1.0 g/mL)",
+                options: ["55.5 M", "1.0 M", "18.0 M", "100 M"],
+                correct: "55.5 M",
+                exp: "1000g / 18.02 g/mol = 55.5 moles in 1.0 Liter."
+            }
         ],
     };
    

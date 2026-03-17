@@ -336,7 +336,24 @@
 
     function toggleRef(id) {
         const el = document.getElementById(id);
-        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+        const isVisible = el.style.display === 'block';
+        
+        // Hide all overlays first to prevent stacking
+        document.querySelectorAll('.overlay').forEach(ov => ov.style.display = 'none');
+        
+        if (!isVisible) {
+            el.style.display = 'block';
+            
+            // Load content if it hasn't been loaded yet
+            if (id === 'ptable' && !el.querySelector('iframe')) {
+                el.innerHTML = `<div class="overlay-header"><h3>PTable.com</h3><button class="close-btn" onclick="toggleRef('ptable')">X</button></div>
+                                <iframe src="https://ptable.com/?embed=1" width="100%" height="90%" style="border:none;"></iframe>`;
+            }
+            if (id === 'calc' && !el.querySelector('iframe')) {
+                el.innerHTML = `<div class="overlay-header"><h3>Scientific Calculator</h3><button class="close-btn" onclick="toggleRef('calc')">X</button></div>
+                                <iframe src="https://www.desmos.com/scientific" width="100%" height="90%" style="border:none;"></iframe>`;
+            }
+        }
     }
 
     // Initialize with Atomic

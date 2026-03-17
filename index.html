@@ -90,8 +90,9 @@
 </div>
 
 <script>
-    // Database for Proof of Concept
+   // --- COMPREHENSIVE QUESTION DATABASE ---
     const database = {
+        // 1. ATOMIC STRUCTURE
         atomic: [
             {
                 q: "Which set of quantum numbers (n, l, ml, ms) is possible for an electron in a 3p orbital?",
@@ -103,39 +104,169 @@
                 q: "What is the correct electron configuration for the Cu⁺ ion?",
                 options: ["[Ar] 3d¹⁰", "[Ar] 4s¹ 3d⁹", "[Ar] 4s² 3d⁸", "[Ar] 4s¹ 3d¹⁰"],
                 correct: "[Ar] 3d¹⁰",
-                exp: "Neutral Cu is [Ar] 4s¹ 3d¹⁰. When forming a +1 ion, the 4s electron is removed first."
+                exp: "Neutral Cu is [Ar] 4s¹ 3d¹⁰. To form Cu⁺, the 4s electron is removed first."
             },
             {
                 q: "Which atom has the largest first ionization energy?",
                 options: ["F", "O", "C", "Li"],
                 correct: "F",
-                exp: "Ionization energy generally increases across a period from left to right due to increased effective nuclear charge."
-            }
-        ]
-        {
-    const database = {
-        // ... (keep atomic)
-        gaslaws: [
-            {
-                q: "A sample of gas has a volume of 2.00 L at 27.0 °C. What will be the volume at 127 °C if pressure remains constant?",
-                options: ["2.67 L", "9.41 L", "1.50 L", "0.42 L"],
-                correct: "2.67 L",
-                exp: "Charles's Law (V1/T1 = V2/T2). Remember to convert to Kelvin: (2.00 L / 300 K) = (V2 / 400 K). If you got 9.41, you used Celsius!"
-            },
-            {
-                q: "What is the density of Nitrogen gas (N₂) at STP?",
-                options: ["1.25 g/L", "0.625 g/L", "28.0 g/L", "1.14 g/L"],
-                correct: "1.25 g/L",
-                exp: "Density = (Molar Mass * P) / (R * T). At STP, 28.0 g / 22.4 L = 1.25 g/L."
-            },
-            {
-                q: "A mixture of He and Ne has a total pressure of 1.20 atm. If there are 2.0 moles of He and 3.0 moles of Ne, what is the partial pressure of He?",
-                options: ["0.48 atm", "0.72 atm", "0.60 atm", "0.24 atm"],
-                correct: "0.48 atm",
-                exp: "Dalton's Law: P(He) = X(He) * P(total). Mole fraction X(He) = 2 / (2+3) = 0.4. Then 0.4 * 1.20 atm = 0.48 atm."
+                exp: "Ionization energy increases across a period (left to right) due to increased effective nuclear charge."
             }
         ],
-        // ... (other topics)
+
+        // 2. MOLECULAR STRUCTURE
+        molecular: [
+            {
+                q: "According to VSEPR theory, what is the molecular geometry of SF₄?",
+                options: ["See-saw", "Tetrahedral", "Square Planar", "Trigonal Bipyramidal"],
+                correct: "See-saw",
+                exp: "SF₄ has 5 electron domains (4 bonds, 1 lone pair). The geometry is see-saw."
+            },
+            {
+                q: "What is the hybridization of the central carbon in CO₂?",
+                options: ["sp", "sp²", "sp³", "dsp³"],
+                correct: "sp",
+                exp: "Carbon in CO₂ has two double bonds and zero lone pairs (2 domains), requiring sp hybridization."
+            },
+            {
+                q: "Which molecule is polar?",
+                options: ["NH₃", "BF₃", "CCl₄", "CO₂"],
+                correct: "NH₃",
+                exp: "NH₃ is trigonal pyramidal; the bond dipoles do not cancel out, resulting in a net dipole."
+            }
+        ],
+
+        // 3. STOICHIOMETRY
+        stoichiometry: [
+            {
+                q: "If 10.0 g of Mg (MM = 24.3) reacts with excess HCl, how many moles of H₂ gas are produced?",
+                options: ["0.412 mol", "0.824 mol", "243 mol", "0.206 mol"],
+                correct: "0.412 mol",
+                exp: "Mg + 2HCl -> MgCl₂ + H₂. The ratio is 1:1. (10.0 g / 24.3 g/mol) = 0.412 mol."
+            },
+            {
+                q: "What is the mass percent of Oxygen in KClO₃ (MM = 122.5)?",
+                options: ["39.2%", "13.1%", "48.0%", "24.5%"],
+                correct: "39.2%",
+                exp: "(3 * 16.0) / 122.5 = 48/122.5 = 0.392 or 39.2%."
+            },
+            {
+                q: "How many grams of NaOH (MM = 40.0) are needed to make 250 mL of a 0.500 M solution?",
+                options: ["5.00 g", "20.0 g", "2.50 g", "10.0 g"],
+                correct: "5.00 g",
+                exp: "Moles = M * V = 0.500 * 0.250 = 0.125 mol. Mass = 0.125 * 40.0 = 5.00 g."
+            }
+        ],
+
+        // 4. GAS LAWS
+        gaslaws: [
+            {
+                q: "A gas at 2.0 L and 300 K is heated to 600 K at constant pressure. What is the new volume?",
+                options: ["4.0 L", "1.0 L", "2.0 L", "8.0 L"],
+                correct: "4.0 L",
+                exp: "Charles's Law: V1/T1 = V2/T2. If Temperature doubles, Volume doubles."
+            },
+            {
+                q: "What is the pressure of 1.0 mol of an ideal gas at 273 K in a 22.4 L container?",
+                options: ["1.0 atm", "22.4 atm", "0.0821 atm", "273 atm"],
+                correct: "1.0 atm",
+                exp: "These are STP conditions. 1 mole of gas at 273 K occupies 22.4 L at 1 atm."
+            },
+            {
+                q: "Which gas will effuse the fastest?",
+                options: ["He", "CH₄", "O₂", "N₂"],
+                correct: "He",
+                exp: "Graham's Law: Lighter gases (lower molar mass) effuse faster. Helium is the lightest listed."
+            }
+        ],
+
+        // 5. KINETICS
+        kinetics: [
+            {
+                q: "If doubling [A] quadruples the rate, what is the reaction order with respect to A?",
+                options: ["Second Order", "First Order", "Zero Order", "Half Order"],
+                correct: "Second Order",
+                exp: "Rate = [A]ⁿ. If 2ⁿ = 4, then n = 2."
+            },
+            {
+                q: "How does a catalyst increase the rate of a reaction?",
+                options: ["Lowering Activation Energy", "Increasing Temperature", "Increasing Concentration", "Lowering Enthalpy"],
+                correct: "Lowering Activation Energy",
+                exp: "Catalysts provide an alternative pathway with a lower Ea."
+            },
+            {
+                q: "For a first-order reaction, what plot yields a straight line?",
+                options: ["ln[A] vs t", "[A] vs t", "1/[A] vs t", "log(k) vs 1/T"],
+                correct: ["ln[A] vs t"],
+                exp: "The integrated rate law for 1st order is ln[A] = -kt + ln[A]₀, which is y = mx + b."
+            }
+        ],
+
+        // 6. EQUILIBRIUM
+        equilibrium: [
+            {
+                q: "Which change will shift the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g) + heat to the right?",
+                options: ["Decreasing Volume", "Increasing Temp", "Adding NH₃", "Adding a Catalyst"],
+                correct: "Decreasing Volume",
+                exp: "Decreasing volume increases pressure; equilibrium shifts to the side with fewer gas moles (the right)."
+            },
+            {
+                q: "What is the Ksp expression for Ag₂CO₃?",
+                options: ["[Ag⁺]²[CO₃²⁻]", "[Ag⁺][CO₃²⁻]", "[2Ag⁺][CO₃²⁻]", "[Ag⁺]²[C][O]³"],
+                correct: "[Ag⁺]²[CO₃²⁻]",
+                exp: "Ag₂CO₃(s) ⇌ 2Ag⁺ + CO₃²⁻. The coefficients become exponents in the Ksp expression."
+            },
+            {
+                q: "If Q > K, which way will the reaction shift?",
+                options: ["Towards Reactants", "Towards Products", "No Shift", "Temperature Dependent"],
+                correct: "Towards Reactants",
+                exp: "Q > K means there are too many products; the system shifts left (reactants) to reach equilibrium."
+            }
+        ],
+
+        // 7. THERMODYNAMICS
+        thermo: [
+            {
+                q: "A process is always spontaneous if:",
+                options: ["ΔH is (-) and ΔS is (+)", "ΔH is (+) and ΔS is (-)", "ΔH is (-) and ΔS is (-)", "ΔH is (+) and ΔS is (+)"],
+                correct: "ΔH is (-) and ΔS is (+)",
+                exp: "ΔG = ΔH - TΔS. If ΔH is negative and ΔS is positive, ΔG is always negative."
+            },
+            {
+                q: "What is the entropy change (ΔS) for the freezing of water?",
+                options: ["Negative", "Positive", "Zero", "Not enough info"],
+                correct: "Negative",
+                exp: "Freezing goes from liquid (disordered) to solid (ordered), so entropy decreases."
+            },
+            {
+                q: "What is the standard enthalpy of formation (ΔHf°) for O₂(g)?",
+                options: ["0 kJ/mol", "100 kJ/mol", "-285 kJ/mol", "32 kJ/mol"],
+                correct: "0 kJ/mol",
+                exp: "By definition, ΔHf° for any element in its standard state is zero."
+            }
+        ],
+
+        // 8. ELECTROCHEMISTRY
+        electro: [
+            {
+                q: "What is the oxidation state of Cr in K₂Cr₂O₇?",
+                options: ["+6", "+3", "+7", "+12"],
+                correct: "+6",
+                exp: "2(+1) + 2(Cr) + 7(-2) = 0. Solving for Cr gives +6."
+            },
+            {
+                q: "In a galvanic cell, where does oxidation occur?",
+                options: ["Anode", "Cathode", "Salt Bridge", "Voltmeter"],
+                correct: "Anode",
+                exp: "AN OX / RED CAT. Oxidation always occurs at the Anode."
+            },
+            {
+                q: "If E°cell is positive, the reaction is:",
+                options: ["Spontaneous", "Non-spontaneous", "At Equilibrium", "Endothermic"],
+                correct: "Spontaneous",
+                exp: "A positive cell potential corresponds to a negative Gibbs Free Energy (ΔG = -nFE)."
+            }
+        ]
     };
    
 

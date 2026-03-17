@@ -891,6 +891,318 @@
                 options: ["He", "CH₄", "O₂", "N₂"],
                 correct: "He",
                 exp: "Graham's Law: Lighter gases (lower molar mass) effuse faster. Helium is the lightest listed."
+            },
+            {
+                q: "A gas at 5.0 atm and 2.0 L is compressed to 1.0 L at constant temperature. What is the new pressure?",
+                options: ["10. atm", "2.5 atm", "5.0 atm", "1.0 atm"],
+                correct: "10. atm",
+                exp: "Boyle's Law (P1V1 = P2V2). If volume is halved, pressure doubles."
+            },
+            {
+                q: "A sample of gas has a volume of 2.00 L at 27.0 °C. What will be the volume at 127 °C if pressure remains constant?",
+                options: ["2.67 L", "9.41 L", "1.50 L", "0.42 L"],
+                correct: "2.67 L",
+                exp: "Charles's Law (V1/T1 = V2/T2). Must use Kelvin: (2.00 / 300) = (V2 / 400). V2 = 2.67 L."
+            },
+            {
+                q: "If the pressure of a gas is doubled and its absolute temperature is tripled, the volume will:",
+                options: ["Increase by 1.5 times", "Increase by 6 times", "Decrease by 0.67 times", "Stay the same"],
+                correct: "Increase by 1.5 times",
+                exp: "Combined Gas Law (PV/T = k). V2 = V1 * (P1/P2) * (T2/T1) = V1 * (1/2) * (3/1) = 1.5 V1."
+            },
+            {
+                q: "Which law states that equal volumes of gases at the same T and P contain equal numbers of molecules?",
+                options: ["Avogadro's Law", "Boyle's Law", "Dalton's Law", "Charles's Law"],
+                correct: "Avogadro's Law",
+                exp: "V is directly proportional to n (moles)."
+            },
+            {
+                q: "A rigid 10.0 L container at 25 °C is heated to 100 °C. If the initial pressure was 1.0 atm, what is the final pressure?",
+                options: ["1.25 atm", "4.00 atm", "0.25 atm", "0.80 atm"],
+                correct: "1.25 atm",
+                exp: "Gay-Lussac's Law (P1/T1 = P2/T2). 1.0 / 298 = P2 / 373. P2 = 1.25 atm."
+            },
+
+            // --- IDEAL GAS LAW & STP ---
+            {
+                q: "What is the volume of 1.00 mole of an ideal gas at STP (0 °C, 1.00 atm)?",
+                options: ["22.4 L", "24.5 L", "1.00 L", "22.7 L"],
+                correct: "22.4 L",
+                exp: "Standard Molar Volume at STP is 22.4 L/mol."
+            },
+            {
+                q: "Calculate the pressure of 0.50 moles of O₂ in a 5.0 L container at 300 K. (R = 0.0821 L·atm/mol·K)",
+                options: ["2.46 atm", "1.23 atm", "12.3 atm", "0.50 atm"],
+                correct: "2.46 atm",
+                exp: "P = nRT/V. (0.50 * 0.0821 * 300) / 5.0 = 2.46 atm."
+            },
+            {
+                q: "What is the density of Nitrogen gas (N₂) at STP?",
+                options: ["1.25 g/L", "0.625 g/L", "28.0 g/L", "1.14 g/L"],
+                correct: "1.25 g/L",
+                exp: "Density = (Molar Mass) / (Molar Volume). 28.01 g / 22.4 L = 1.25 g/L."
+            },
+            {
+                q: "A 2.0 g sample of an unknown gas occupies 1.12 L at STP. What is the molar mass?",
+                options: ["40. g/mol", "20. g/mol", "80. g/mol", "2.0 g/mol"],
+                correct: "40. g/mol",
+                exp: "1.12 L at STP = 0.050 moles. MM = mass/moles = 2.0 / 0.050 = 40. g/mol."
+            },
+            {
+                q: "What volume does 8.0 g of Helium occupy at STP?",
+                options: ["44.8 L", "22.4 L", "11.2 L", "2.0 L"],
+                correct: "44.8 L",
+                exp: "8.0 g He = 2.0 moles. 2.0 mol * 22.4 L/mol = 44.8 L."
+            },
+
+            // --- DALTON'S LAW OF PARTIAL PRESSURES ---
+            {
+                q: "A mixture of He and Ne has a total pressure of 1.20 atm. If the mole fraction of He is 0.40, what is the partial pressure of Ne?",
+                options: ["0.72 atm", "0.48 atm", "0.60 atm", "1.20 atm"],
+                correct: "0.72 atm",
+                exp: "X(Ne) = 1.00 - 0.40 = 0.60. P(Ne) = 0.60 * 1.20 = 0.72 atm."
+            },
+            {
+                q: "Oxygen gas is collected over water at 25 °C. If total pressure is 765 torr and vapor pressure of water is 24 torr, what is P(O₂)?",
+                options: ["741 torr", "789 torr", "765 torr", "24 torr"],
+                correct: "741 torr",
+                exp: "P_total = P_gas + P_H2O. P_gas = 765 - 24 = 741 torr."
+            },
+            {
+                q: "A tank contains 2 mol H₂, 3 mol N₂, and 5 mol He. If total pressure is 10 atm, what is the partial pressure of H₂?",
+                options: ["2 atm", "1 atm", "5 atm", "0.2 atm"],
+                correct: "2 atm",
+                exp: "Total moles = 10. Mole fraction H2 = 2/10 = 0.2. P = 0.2 * 10 = 2 atm."
+            },
+
+            // --- GRAHAM'S LAW & KINETIC MOLECULAR THEORY (KMT) ---
+            {
+                q: "Which gas will effuse the fastest at a given temperature?",
+                options: ["CH₄", "O₂", "CO₂", "Cl₂"],
+                correct: "CH₄",
+                exp: "Graham's Law: Effusion rate is inversely proportional to the square root of molar mass. Methane (16) is the lightest here."
+            },
+            {
+                q: "How much faster does Helium (MM=4) effuse compared to Oxygen (MM=32)?",
+                options: ["2.8 times", "8.0 times", "4.0 times", "1.4 times"],
+                correct: "2.8 times",
+                exp: "Rate1/Rate2 = sqrt(M2/M1) = sqrt(32/4) = sqrt(8) ≈ 2.8."
+            },
+            {
+                q: "According to KMT, the average kinetic energy of gas particles is directly proportional to:",
+                options: ["Absolute temperature (K)", "Pressure", "Molar Mass", "Velocity"],
+                correct: "Absolute temperature (K)",
+                exp: "KE_avg = (3/2)RT. It depends only on temperature."
+            },
+            {
+                q: "If two gases are at the same temperature, they must have the same:",
+                options: ["Average Kinetic Energy", "Average Velocity", "Partial Pressure", "Effusion Rate"],
+                correct: "Average Kinetic Energy",
+                exp: "Temperature is a measure of average KE. Heavier molecules move slower to maintain the same KE."
+            },
+            {
+                q: "Calculate the root-mean-square (rms) speed of H₂ (MM=2.02e-3 kg) at 300 K. (R = 8.314 J/mol·K)",
+                options: ["1926 m/s", "192.6 m/s", "61 m/s", "3000 m/s"],
+                correct: "1926 m/s",
+                exp: "v_rms = sqrt(3RT/M). Use R=8.314 and M in kg/mol (0.00202). v = sqrt(3 * 8.314 * 300 / 0.00202) = 1926 m/s."
+            },
+
+            // --- DEVIATIONS FROM IDEAL (REAL GASES) ---
+            {
+                q: "Under which conditions do gases deviate MOST from ideal behavior?",
+                options: ["High pressure and Low temperature", "Low pressure and High temperature", "High pressure and High temperature", "Low pressure and Low temperature"],
+                correct: "High pressure and Low temperature",
+                exp: "At high P, particle volume matters. At low T, intermolecular forces (IMFs) matter."
+            },
+            {
+                q: "In the Van der Waals equation, the 'a' constant accounts for:",
+                options: ["Intermolecular attractions", "Particle volume", "Kinetic energy", "Molecular collisions"],
+                correct: "Intermolecular attractions",
+                exp: "The 'a' term corrects for the fact that real molecules attract each other, reducing the pressure."
+            },
+            {
+                q: "In the Van der Waals equation, the 'b' constant accounts for:",
+                options: ["Excluded volume of particles", "Intermolecular attractions", "Gravitational pull", "Speed of particles"],
+                correct: "Excluded volume of particles",
+                exp: "The 'b' term corrects for the actual volume occupied by the gas molecules."
+            },
+            {
+                q: "Which gas would you expect to have the largest 'a' constant in the Van der Waals equation?",
+                options: ["NH₃", "H₂", "He", "CH₄"],
+                correct: "NH₃",
+                exp: "Ammonia is polar and has strong hydrogen bonding (strong IMFs), leading to a higher 'a' value."
+            },
+            {
+                q: "The compressibility factor (Z = PV/nRT) for an IDEAL gas is exactly:",
+                options: ["1.0", "0", "0.0821", "8.314"],
+                correct: "1.0",
+                exp: "For ideal gases, PV = nRT, so the ratio is always 1."
+            },
+            {
+                q: "If Z < 1 for a real gas, it is primarily due to:",
+                options: ["Intermolecular attractions", "Molecular volume", "High velocity", "Elastic collisions"],
+                correct: "Intermolecular attractions",
+                exp: "Attractions pull molecules together, making the measured pressure lower than ideal (Z < 1)."
+            },
+            {
+                q: "A gas behaves most ideally when:",
+                options: ["Intermolecular forces are negligible and particle volume is small compared to container", "The gas is polar", "The temperature is near the boiling point", "Pressure is extremely high"],
+                correct: "Intermolecular forces are negligible and particle volume is small compared to container",
+                exp: "These are the two main assumptions of KMT that real gases violate."
+            },
+
+            // --- GAS STOICHIOMETRY MIX ---
+            {
+                q: "How many liters of H₂ (at STP) are produced from 0.50 mol of Zn reacting with excess HCl?",
+                options: ["11.2 L", "22.4 L", "5.6 L", "44.8 L"],
+                correct: "11.2 L",
+                exp: "Zn + 2HCl -> ZnCl2 + H2. 0.50 mol Zn produces 0.50 mol H2. 0.50 * 22.4 = 11.2 L."
+            },
+            {
+                q: "2CO + O₂ -> 2CO₂. If 4 L of CO reacts with 2 L of O₂ at constant T and P, how many liters of CO₂ are formed?",
+                options: ["4 L", "2 L", "6 L", "8 L"],
+                correct: "4 L",
+                exp: "Avogadro's Law allows using volumes directly as mole ratios for gases. 4L CO -> 4L CO2."
+            },
+            {
+                q: "What is the pressure in a 1.0 L flask containing 0.40 g of He at 25 °C?",
+                options: ["2.45 atm", "24.5 atm", "0.24 atm", "1.00 atm"],
+                correct: "2.45 atm",
+                exp: "0.40 g He = 0.10 mol. P = (0.10 * 0.0821 * 298) / 1.0 = 2.45 atm."
+            },
+
+            // --- ADVANCED CONCEPTS ---
+            {
+                q: "The phenomenon where a gas cools as it expands through a narrow valve into a vacuum is the:",
+                options: ["Joule-Thomson Effect", "Dalton Effect", "Graham Effect", "Avogadro Effect"],
+                correct: "Joule-Thomson Effect",
+                exp: "Real gases cool because work is done to overcome intermolecular attractions during expansion."
+            },
+            {
+                q: "What is the molar mass of a gas if it effuses 0.5 times as fast as Neon (MM=20)?",
+                options: ["80 g/mol", "40 g/mol", "10 g/mol", "5 g/mol"],
+                correct: "80 g/mol",
+                exp: "0.5 = sqrt(20/M). 0.25 = 20/M. M = 80."
+            },
+            {
+                q: "Which postulate of KMT is most clearly violated at extremely high pressures?",
+                options: ["Gas particles have negligible volume", "Collisions are elastic", "Particles move in straight lines", "No attractive forces exist"],
+                correct: "Gas particles have negligible volume",
+                exp: "At high pressure, the molecules are packed so tightly that their own volume becomes a significant fraction of the total space."
+            },
+            {
+                q: "What is the density of CO₂ at 100. °C and 2.00 atm?",
+                options: ["2.87 g/L", "1.44 g/L", "5.74 g/L", "0.72 g/L"],
+                correct: "2.87 g/L",
+                exp: "d = PM/RT. (2.00 * 44.01) / (0.0821 * 373) = 2.87 g/L."
+            },
+            {
+                q: "A barometer reads 740 mmHg. What is this pressure in kilopascals (kPa)?",
+                options: ["98.7 kPa", "74.0 kPa", "101.3 kPa", "1.00 kPa"],
+                correct: "98.7 kPa",
+                exp: "740 mmHg * (101.3 kPa / 760 mmHg) = 98.7 kPa."
+            },
+            {
+                q: "Which gas would have a speed distribution curve (Maxwell-Boltzmann) that is shifted furthest to the right at 298 K?",
+                options: ["H₂", "He", "N₂", "O₂"],
+                correct: "H₂",
+                exp: "Lightest molecules have the highest average speeds, shifting the distribution curve right."
+            },
+            {
+                q: "At what temperature will 1 mole of CH₄ in a 2.0 L container exert a pressure of 10.0 atm?",
+                options: ["244 K", "24.4 K", "122 K", "488 K"],
+                correct: "244 K",
+                exp: "T = PV/nR = (10 * 2.0) / (1.0 * 0.0821) = 243.6 K."
+            },
+            {
+                q: "The 'Mean Free Path' of a gas molecule is:",
+                options: ["Average distance between collisions", "Average speed", "Total distance traveled", "Radius of the molecule"],
+                correct: "Average distance between collisions",
+                exp: "It increases as pressure decreases (fewer particles to bump into)."
+            },
+            {
+                q: "Which gas constant (R) value should be used if pressure is in kPa and volume is in dm³?",
+                options: ["8.314", "0.0821", "62.36", "1.987"],
+                correct: "8.314",
+                exp: "1 kPa·dm³ is exactly 1 Joule, so the SI constant 8.314 is used."
+            },
+            {
+                q: "Comparing two 1L flasks: Flask A has H₂ at 273K, Flask B has O₂ at 273K. Both are at 1 atm. Which is TRUE?",
+                options: ["Both flasks contain the same number of molecules", "Flask A has more molecules", "Flask B has a higher average KE", "Flask A has a higher pressure"],
+                correct: "Both flasks contain the same number of molecules",
+                exp: "Avogadro's hypothesis: Same P, V, and T means same n (moles)."
+            },
+            {
+                q: "How many moles of gas are in a 30.0 L tank at 20.0 atm and 25.0 °C?",
+                options: ["24.5 mol", "600 mol", "2.45 mol", "12.2 mol"],
+                correct: "24.5 mol",
+                exp: "n = PV/RT = (20 * 30) / (0.0821 * 298) = 24.5 mol."
+            },
+            {
+                q: "Which statement is true regarding the kinetic energy (KE) of H₂ and O₂ at the same temperature?",
+                options: ["They have the same average KE", "H₂ has higher KE because it's faster", "O₂ has higher KE because it's heavier", "KE depends on volume"],
+                correct: "They have the same average KE",
+                exp: "Temperature is the only factor determining average KE."
+            },
+            {
+                q: "Convert 2.50 atm to torr.",
+                options: ["1900 torr", "760 torr", "304 torr", "2.50 torr"],
+                correct: "1900 torr",
+                exp: "2.50 * 760 = 1900 torr."
+            },
+            {
+                q: "Which gas would deviate LEAST from ideal behavior?",
+                options: ["He", "H₂O", "NH₃", "Cl₂"],
+                correct: "He",
+                exp: "Helium is tiny and has the weakest possible IMFs (London Dispersion), making it the most 'ideal' gas."
+            },
+            {
+                q: "If you double the moles of gas and double the temperature while keeping volume constant, the pressure will:",
+                options: ["Quadruple", "Double", "Stay the same", "Increase by 1.5x"],
+                correct: "Quadruple",
+                exp: "P = nRT/V. Doubling n (2x) and T (2x) results in 2 * 2 = 4x pressure."
+            },
+            {
+                q: "Standard temperature for gas laws is defined as:",
+                options: ["273.15 K", "298.15 K", "0.00 K", "25.00 °C"],
+                correct: "273.15 K",
+                exp: "STP uses 0 °C (273.15 K). Do not confuse with thermodynamics (SATP) which uses 298 K."
+            },
+            {
+                q: "The molar mass of a gas is 64 g/mol. What is its density at STP?",
+                options: ["2.86 g/L", "1.43 g/L", "64 g/L", "0.35 g/L"],
+                correct: "2.86 g/L",
+                exp: "64 g / 22.4 L = 2.86 g/L."
+            },
+            {
+                q: "If a gas has a volume of 100 mL at 100 kPa, what is the volume at 50 kPa?",
+                options: ["200 mL", "50 mL", "100 mL", "400 mL"],
+                correct: "200 mL",
+                exp: "Inverse relationship: Halving the pressure doubles the volume."
+            },
+            {
+                q: "Which of the following describes the behavior of a 'Real Gas'?",
+                options: ["Attractive forces between molecules decrease the pressure below the ideal value", "Molecules are point masses with no volume", "Collisions are perfectly elastic", "The gas cannot be liquefied"],
+                correct: "Attractive forces between molecules decrease the pressure below the ideal value",
+                exp: "Real molecules attract each other, meaning they strike the walls with less force."
+            },
+            {
+                q: "The volume of a gas is 5.0 L at 20 °C. What is the volume at 40 °C? (P constant)",
+                options: ["5.3 L", "10.0 L", "2.5 L", "4.7 L"],
+                correct: "5.3 L",
+                exp: "Use Kelvin! (5.0 / 293) = (V2 / 313). V2 = 5.34 L. If you doubled it to 10, you used Celsius!"
+            },
+            {
+                q: "Dalton's Law of Partial Pressures is strictly true only for:",
+                options: ["Ideal gases", "Non-polar gases", "Gases at high pressure", "Noble gases"],
+                correct: "Ideal gases",
+                exp: "It assumes no intermolecular interactions between the different gas species."
+            },
+            {
+                q: "What is the pressure of 2.0 moles of gas in a 44.8 L container at 0 °C?",
+                options: ["1.0 atm", "2.0 atm", "0.5 atm", "22.4 atm"],
+                correct: "1.0 atm",
+                exp: "At 0 °C, 1 mole in 22.4 L is 1 atm. Thus, 2 moles in 44.8 L is also 1 atm."
             }
         ],
 
@@ -1000,7 +1312,7 @@
                 options: ["83 mL", "120 mL", "3.0 L", "48 mL"],
                 correct: "83 mL",
                 exp: "Use M1V1 = M2V2: (12.0 M)(V1) = (0.50 M)(2.0 L). V1 = 0.0833 L, which is 83.3 mL."
-            }
+            },
             // --- CONCENTRATION UNITS ---
             {
                 q: "What is the molarity of a solution containing 10.0 g of KOH (MM = 56.1) in 250. mL of solution?",

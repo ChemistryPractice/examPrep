@@ -1570,6 +1570,383 @@
                 options: ["Towards Reactants", "Towards Products", "No Shift", "Temperature Dependent"],
                 correct: "Towards Reactants",
                 exp: "Q > K means there are too many products; the system shifts left (reactants) to reach equilibrium."
+            },
+            // --- GENERAL CONCEPTS & K EXPRESSIONS ---
+            {
+                q: "What is the correct equilibrium expression for: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g)?",
+                options: ["[SO₃]² / ([SO₂]²[O₂])", "[SO₃] / ([SO₂][O₂])", "([SO₂]²[O₂]) / [SO₃]²", "[SO₃]² / ([SO₂] + [O₂])"],
+                correct: "[SO₃]² / ([SO₂]²[O₂])",
+                exp: "K is products over reactants, with coefficients as exponents."
+            },
+            {
+                q: "Which of the following is NOT included in an equilibrium constant expression?",
+                options: ["Pure solids and liquids", "Gases", "Aqueous solutions", "None of the above"],
+                correct: "Pure solids and liquids",
+                exp: "The concentration of pure solids and liquids is constant and is omitted from the K expression."
+            },
+            {
+                q: "If K > 1 for a reaction, what does this imply at equilibrium?",
+                options: ["Products are favored", "Reactants are favored", "The reaction is very fast", "The reaction is at STP"],
+                correct: "Products are favored",
+                exp: "A large K means the numerator (products) is much larger than the denominator (reactants)."
+            },
+            {
+                q: "If the reaction quotient Q < K, in which direction will the reaction proceed?",
+                options: ["To the right (products)", "To the left (reactants)", "It is already at equilibrium", "The reaction will stop"],
+                correct: "To the right (products)",
+                exp: "If Q < K, there are not enough products yet; the system shifts right to reach equilibrium."
+            },
+            {
+                q: "What is the relationship between $K_p$ and $K_c$ for the reaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g)?",
+                options: ["$K_p = K_c(RT)^{-2}$", "$K_p = K_c(RT)²$", "$K_p = K_c$", "$K_p = K_c(RT)^{-4}$"],
+                correct: "$K_p = K_c(RT)^{-2}$",
+                exp: "$\Delta n = \text{moles product} - \text{moles reactant} = 2 - 4 = -2$."
+            },
+
+            // --- LE CHATELIER'S PRINCIPLE ---
+            {
+                q: "N₂(g) + 3H₂(g) ⇌ 2NH₃(g) + heat. Increasing temperature will shift the equilibrium to the:",
+                options: ["Left", "Right", "No shift", "Impossible to tell"],
+                correct: "Left",
+                exp: "Adding heat to an exothermic reaction is like adding product; the system shifts toward the reactants."
+            },
+            {
+                q: "For a gas-phase reaction, decreasing the volume of the container will shift the equilibrium toward:",
+                options: ["The side with fewer moles of gas", "The side with more moles of gas", "The products", "The reactants"],
+                correct: "The side with fewer moles of gas",
+                exp: "Decreasing volume increases pressure; the system relieves this by moving to the side with fewer particles."
+            },
+            {
+                q: "Adding a catalyst to a system at equilibrium will:",
+                options: ["Have no effect on the equilibrium position", "Shift it to the right", "Shift it to the left", "Increase the value of K"],
+                correct: "Have no effect on the equilibrium position",
+                exp: "Catalysts speed up the rate of both forward and reverse reactions equally."
+            },
+            {
+                q: "What is the ONLY factor that can change the value of the equilibrium constant K?",
+                options: ["Temperature", "Pressure", "Concentration", "Catalyst"],
+                correct: "Temperature",
+                exp: "Changing T changes the energy available to the system, which fundamentally changes the ratio of products/reactants."
+            },
+
+            // --- ACIDS AND BASES (pH/pOH) ---
+            {
+                q: "What is the pH of a 0.001 M HCl solution?",
+                options: ["3.0", "1.0", "0.001", "11.0"],
+                correct: "3.0",
+                exp: "$pH = -\log[H^+]$. $-\log(10^{-3}) = 3$."
+            },
+            {
+                q: "If the pOH of a solution is 4.5, what is the pH?",
+                options: ["9.5", "4.5", "7.0", "14.0"],
+                correct: "9.5",
+                exp: "$pH + pOH = 14$ at 25°C."
+            },
+            {
+                q: "Which of the following is a strong base?",
+                options: ["KOH", "NH₃", "CH₃COOH", "Al(OH)₃"],
+                correct: "KOH",
+                exp: "Group 1 and 2 hydroxides (like KOH, NaOH, Ba(OH)₂) are strong bases."
+            },
+            {
+                q: "What is the conjugate acid of HPO₄²⁻?",
+                options: ["H₂PO₄⁻", "PO₄³⁻", "H₃PO₄", "OH⁻"],
+                correct: "H₂PO₄⁻",
+                exp: "A conjugate acid has one more $H^+$ than the base."
+            },
+            {
+                q: "In the reaction: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, H₂O is acting as a:",
+                options: ["Brønsted-Lowry Acid", "Brønsted-Lowry Base", "Lewis Base", "Catalyst"],
+                correct: "Brønsted-Lowry Acid",
+                exp: "Water donates a proton to ammonia."
+            },
+
+            // --- WEAK ACIDS/BASES & BUFFERS ---
+            {
+                q: "What is the $K_a$ expression for the weak acid HCN?",
+                options: ["[H⁺][CN⁻] / [HCN]", "[HCN] / ([H⁺][CN⁻])", "[H⁺] + [CN⁻]", "[CN⁻] / [HCN]"],
+                correct: "[H⁺][CN⁻] / [HCN]",
+                exp: "Standard $K_a$ is $[H^+][A^-] / [HA]$."
+            },
+            {
+                q: "A buffer solution consists of a mixture of:",
+                options: ["A weak acid and its conjugate base", "A strong acid and its conjugate base", "A weak acid and a strong base", "Water and salt"],
+                correct: "A weak acid and its conjugate base",
+                exp: "Buffers require a 'reservoir' of both a weak acid and its conjugate to neutralize added $H^+$ or $OH^-$."
+            },
+            {
+                q: "The Henderson-Hasselbalch equation is used to calculate the pH of:",
+                options: ["Buffers", "Strong acids", "Strong bases", "Titration endpoints"],
+                correct: "Buffers",
+                exp: "$pH = pK_a + \log([\text{Base}]/[\text{Acid}])$."
+            },
+            {
+                q: "Which salt will form a basic solution when dissolved in water?",
+                options: ["NaF", "NaCl", "NH₄Cl", "KNO₃"],
+                correct: "NaF",
+                exp: "$F^-$ is the conjugate of a weak acid (HF), so it will act as a base in water."
+            },
+
+            // --- SOLUBILITY PRODUCT (Ksp) ---
+            {
+                q: "What is the $K_{sp}$ expression for Ag₂CrO₄?",
+                options: ["[Ag⁺]²[CrO₄²⁻]", "[Ag⁺][CrO₄²⁻]", "[2Ag⁺][CrO₄²⁻]", "[Ag⁺]² / [CrO₄²⁻]"],
+                correct: "[Ag⁺]²[CrO₄²⁻]",
+                exp: "Ag₂CrO₄ ⇌ 2Ag⁺ + CrO₄²⁻. The coefficient 2 becomes an exponent."
+            },
+            {
+                q: "The molar solubility of a salt is reduced by adding an ion already present in the equilibrium. This is called:",
+                options: ["The common ion effect", "Le Chatelier's Law", "The buffer effect", "Supersaturation"],
+                correct: "The common ion effect",
+                exp: "Adding an ion shifts the solubility equilibrium toward the solid (left)."
+            },
+            {
+                q: "If $Q_{sp} > K_{sp}$, what will happen in the solution?",
+                options: ["A precipitate will form", "The solution is unsaturated", "No change", "The solid will dissolve more"],
+                correct: "A precipitate will form",
+                exp: "If Q > K, the concentration of ions is higher than the equilibrium allows, forcing precipitation."
+            },
+            {
+                q: "What is the molar solubility (s) of AgCl if $K_{sp} = 1.8 \times 10^{-10}$?",
+                options: ["$1.34 \times 10^{-5}$ M", "$1.8 \times 10^{-10}$ M", "$9.0 \times 10^{-11}$ M", "$1.34 \times 10^{-10}$ M"],
+                correct: "$1.34 \times 10^{-5}$ M",
+                exp: "$K_{sp} = s^2$. $s = \sqrt{1.8 \times 10^{-10}} = 1.34 \times 10^{-5}$."
+            },
+
+            // --- MORE ACID/BASE & BUFFER ---
+            {
+                q: "What is the $pH$ of a buffer where $[Acid] = [Conjugate Base]$?",
+                options: ["$pH = pK_a$", "$pH = 7.0$", "$pH = 14.0$", "$pH = 1$"],
+                correct: "$pH = pK_a$",
+                exp: "When concentrations are equal, $\log(1) = 0$, so $pH = pK_a$."
+            },
+            {
+                q: "Which indicator is best for a titration of a weak acid with a strong base (equivalence point $pH \approx 9$)?",
+                options: ["Phenolphthalein (range 8-10)", "Methyl red (range 4-6)", "Bromothymol blue (range 6-7)", "Litmus"],
+                correct: "Phenolphthalein (range 8-10)",
+                exp: "You want an indicator that changes color at or near the equivalence point pH."
+            },
+            {
+                q: "At the equivalence point of a titration of a strong acid and strong base, the pH is:",
+                options: ["7.0", "1.0", "13.0", "9.0"],
+                correct: "7.0",
+                exp: "The resulting salt is neutral."
+            },
+            {
+                q: "Lewis defined an acid as:",
+                options: ["An electron pair acceptor", "A proton donor", "An electron pair donor", "A hydroxide producer"],
+                correct: "An electron pair acceptor",
+                exp: "Lewis theory is the broadest, focusing on electrons rather than protons."
+            },
+            {
+                q: "A 0.10 M solution of a weak acid has a pH of 3.0. What is the $K_a$?",
+                options: ["$1.0 \times 10^{-5}$", "$1.0 \times 10^{-3}$", "$1.0 \times 10^{-2}$", "$1.0 \times 10^{-6}$"],
+                correct: "$1.0 \times 10^{-5}$",
+                exp: "$K_a = [H^+]^2 / [HA] = (10^{-3})^2 / 0.10 = 10^{-6} / 0.1 = 10^{-5}$."
+            },
+            {
+                q: "Polyprotic acids like $H_3PO_4$ lose their protons:",
+                options: ["In steps, with each $K_a$ getting smaller", "All at once", "In steps, with each $K_a$ getting larger", "Only when heated"],
+                correct: "In steps, with each $K_a$ getting smaller",
+                exp: "It is increasingly difficult to remove a positive proton from an increasingly negative ion."
+            },
+            {
+                q: "What is the concentration of $OH^-$ in a solution with $pH = 4$?",
+                options: ["$1.0 \times 10^{-10}$ M", "$1.0 \times 10^{-4}$ M", "$1.0 \times 10^{-7}$ M", "$4.0$ M"],
+                correct: "$1.0 \times 10^{-10}$ M",
+                exp: "If $pH = 4$, $pOH = 10$. $[OH^-] = 10^{-10}$."
+            },
+            {
+                q: "Which of the following describes an amphiprotic species?",
+                options: ["Can act as either an acid or a base", "Only acts as a strong acid", "Cannot dissolve in water", "Is always a gas"],
+                correct: "Can act as either an acid or a base",
+                exp: "Examples include $H_2O$ and $HCO_3^-$. "
+            },
+
+            // --- THERMO & EQUILIBRIUM ---
+            {
+                q: "What is the relationship between $\Delta G^\circ$ and $K$?",
+                options: ["$\Delta G^\circ = -RT \ln K$", "$\Delta G^\circ = RT \log K$", "$K = \Delta G^\circ / RT$", "$\Delta G^\circ = K$"],
+                correct: "$\Delta G^\circ = -RT \ln K$",
+                exp: "This link connects spontaneity with the position of equilibrium."
+            },
+            {
+                q: "If a reaction is spontaneous in the forward direction ($\Delta G < 0$), then:",
+                options: ["$Q < K$", "$Q > K$", "$Q = K$", "$K = 0$"],
+                correct: "$Q < K$",
+                exp: "The reaction moves forward to reach equilibrium."
+            },
+
+            // --- KSP CHALLENGES ---
+            {
+                q: "Which of the following salts is MOST soluble in water based on $K_{sp}$ values?",
+                options: ["AgCl ($1.8 \times 10^{-10}$)", "AgI ($8.5 \times 10^{-17}$)", "AgBr ($5.0 \times 10^{-13}$)", "All equal"],
+                correct: "AgCl ($1.8 \times 10^{-10}$)",
+                exp: "For salts with the same ion ratio (1:1), the larger $K_{sp}$ means higher solubility."
+            },
+            {
+                q: "The $K_{sp}$ of $Mg(OH)_2$ is $1.8 \times 10^{-11}$. How does the solubility change if the pH is decreased?",
+                options: ["Increases", "Decreases", "No change", "Solubility becomes zero"],
+                correct: "Increases",
+                exp: "Lower pH means more $H^+$, which reacts with $OH^-$ to form water, shifting the equilibrium right (Le Chatelier)."
+            },
+            {
+                q: "What is the $K_{sp}$ of $CaF_2$ in terms of its molar solubility (s)?",
+                options: ["$4s^3$", "$s^2$", "$2s^2$", "$s^3$"],
+                correct: "$4s^3$",
+                exp: "$K_{sp} = [Ca^{2+}][F^-]^2 = (s)(2s)^2 = 4s^3$."
+            },
+
+            // --- CONCEPTUAL WRAP UP ---
+            {
+                q: "In a saturated solution of $PbCl_2$, the rate of dissolution is ______ the rate of crystallization.",
+                options: ["Equal to", "Greater than", "Less than", "Zero"],
+                correct: "Equal to",
+                exp: "Saturation is a state of dynamic equilibrium."
+            },
+            {
+                q: "What happens to K for the reaction: A + B ⇌ C if the coefficients are doubled (2A + 2B ⇌ 2C)?",
+                options: ["The new K is the square of the old K", "K doubles", "K stays the same", "K is halved"],
+                correct: "The new K is the square of the old K",
+                exp: "According to the rules for manipulating K expressions."
+            },
+            {
+                q: "If K for forward reaction is 10, K for reverse reaction is:",
+                options: ["0.1", "-10", "10", "1"],
+                correct: "0.1",
+                exp: "$K_{rev} = 1 / K_{fwd}$."
+            },
+            {
+                q: "Calculate the percent ionization of a 0.10 M acid where $[H^+] = 0.001$ M.",
+                options: ["1.0%", "0.1%", "10%", "0.01%"],
+                correct: "1.0%",
+                exp: "$(0.001 / 0.10) \times 100 = 1.0%$."
+            },
+            {
+                q: "Which property defines a 'weak' electrolyte?",
+                options: ["Partial dissociation in water", "Inability to conduct electricity", "Very high molar mass", "Reacts only with metals"],
+                correct: "Partial dissociation in water",
+                exp: "Weak acids, weak bases, and slightly soluble salts are weak electrolytes because they only partially form ions."
+            },
+            {
+                q: "A pH of 7 is neutral ONLY at:",
+                options: ["25 °C", "All temperatures", "STP", "High pressure"],
+                correct: "25 °C",
+                exp: "$K_w$ changes with temperature, so the neutral point ($[H^+]=[OH^-]$) also changes."
+            },
+            {
+                q: "Mixing $HCl$ and $NH_3$ results in a salt that is:",
+                options: ["Acidic", "Basic", "Neutral", "Amphoteric"],
+                correct: "Acidic",
+                exp: "Strong acid + Weak base = Acidic salt ($NH_4Cl$)."
+            },
+            {
+                q: "The Buffer Capacity is highest when:",
+                options: ["Concentrations of acid and base are high and nearly equal", "Concentrations are low", "The acid is much stronger than the base", "The solution is diluted with water"],
+                correct: "Concentrations of acid and base are high and nearly equal",
+                exp: "Higher concentrations mean more 'buffer' to resist changes."
+            },
+            {
+                q: "A Lewis Base is an:",
+                options: ["Electron pair donor", "Electron pair acceptor", "Proton donor", "Proton acceptor"],
+                correct: "Electron pair donor",
+                exp: "Example: $NH_3$ has a lone pair it can share."
+            },
+            {
+                q: "At the halfway point to the equivalence point in a weak acid titration:",
+                options: ["$pH = pK_a$", "$pH = 7$", "$pH = pOH$", "The acid is completely gone"],
+                correct: "$pH = pK_a$",
+                exp: "Half the acid has been converted to conjugate base, so $[HA] = [A^-]$."
+            },
+            {
+                q: "Which of the following is the strongest acid?",
+                options: ["$HClO_4$", "$HClO_3$", "$HClO_2$", "$HClO$"],
+                correct: "$HClO_4$",
+                exp: "For oxoacids with the same central atom, acidity increases with more oxygens."
+            },
+            {
+                q: "The 'Common Ion Effect' is an application of:",
+                options: ["Le Chatelier's Principle", "Boyle's Law", "The Second Law of Thermodynamics", "Dalton's Law"],
+                correct: "Le Chatelier's Principle",
+                exp: "It's just a shift in equilibrium caused by adding a component."
+            },
+            {
+                q: "What is the pH of pure water at 25 °C?",
+                options: ["7.0", "0.0", "14.0", "1.0"],
+                correct: "7.0",
+                exp: "Standard neutral pH."
+            },
+            {
+                q: "Adding $HCl(g)$ to a saturated solution of $NaCl(aq)$ will:",
+                options: ["Cause $NaCl(s)$ to precipitate", "Increase the solubility of $NaCl$", "Have no effect", "Decrease the concentration of $Cl^-$"],
+                correct: "Cause $NaCl(s)$ to precipitate",
+                exp: "The common ion $Cl^-$ shifts the equilibrium to the solid side."
+            },
+            {
+                q: "Hydrolysis of the cyanide ion ($CN^-$) produces:",
+                options: ["$HCN$ and $OH^-$", "$HCN$ and $H^+$", "$C$ and $N_2$", "$NH_3$"],
+                correct: "$HCN$ and $OH^-$",
+                exp: "$CN^- + H_2O ⇌ HCN + OH^-$."
+            },
+            {
+                q: "Blood is buffered primarily by the:",
+                options: ["Bicarbonate system", "Phosphate system", "Acetate system", "Chloride system"],
+                correct: "Bicarbonate system",
+                exp: "$CO_2 / HCO_3^-$ is the main blood buffer."
+            },
+            {
+                q: "What is the concentration of $H^+$ in a solution with $pH = 2.30$?",
+                options: ["$5.0 \times 10^{-3}$ M", "$2.3 \times 10^{-1}$ M", "$5.0 \times 10^{-2}$ M", "$1.0 \times 10^{-2}$ M"],
+                correct: "$5.0 \times 10^{-3}$ M",
+                exp: "$[H^+] = 10^{-2.30} \approx 0.0050$."
+            },
+            {
+                q: "Which $K_a$ value represents the strongest acid?",
+                options: ["$1.0 \times 10^{-2}$", "$1.0 \times 10^{-5}$", "$1.0 \times 10^{-10}$", "$1.0 \times 10^{2}$"],
+                correct: "$1.0 \times 10^{2}$",
+                exp: "Larger $K_a$ (smaller $pK_a$) means a stronger acid."
+            },
+            {
+                q: "Small $K_{sp}$ values indicate that a substance is:",
+                options: ["Slightly soluble", "Extremely soluble", "A liquid at room temp", "An ideal gas"],
+                correct: "Slightly soluble",
+                exp: "Very few ions are present in solution at equilibrium."
+            },
+            {
+                q: "The $pH$ of a 0.1 M solution of $CH_3COONa$ will be:",
+                options: ["Greater than 7", "Less than 7", "Exactly 7", "Exactly 1"],
+                correct: "Greater than 7",
+                exp: "Sodium acetate is a salt of a weak acid and a strong base, so it is basic."
+            },
+            {
+                q: "Which of the following is NOT a strong acid?",
+                options: ["$HF$", "$HCl$", "$HBr$", "$HI$"],
+                correct: "$HF$",
+                exp: "Despite fluorine's electronegativity, the H-F bond is too strong for complete dissociation."
+            },
+            {
+                q: "What happens to the $pH$ of a buffer if it is diluted with a small amount of water?",
+                options: ["It remains almost unchanged", "It increases significantly", "It decreases significantly", "It becomes exactly 7"],
+                correct: "It remains almost unchanged",
+                exp: "Dilution changes both Acid and Base concentrations by the same ratio, keeping their ratio constant in the HH equation."
+            },
+            {
+                q: "In an endothermic reaction at equilibrium, increasing the temperature will:",
+                options: ["Increase the value of K", "Decrease the value of K", "Not change K", "Stop the reaction"],
+                correct: "Increase the value of K",
+                exp: "For endothermic reactions, heat is a reactant. Adding heat drives the reaction forward."
+            },
+            {
+                q: "The equivalence point and the end point of a titration are:",
+                options: ["Ideally the same, but conceptually different", "Always identical", "Completely unrelated", "Only the same for strong acids"],
+                correct: "Ideally the same, but conceptually different",
+                exp: "Equivalence point is theoretical stoichiometry; end point is the physical color change."
+            },
+            {
+                q: "Which of the following describes an 'I' in an ICE table?",
+                options: ["Initial Concentration", "Integrated Rate", "Ionization Constant", "Intermediate Product"],
+                correct: "Initial Concentration",
+                exp: "ICE stands for Initial, Change, and Equilibrium."
             }
         ],
 

@@ -1225,6 +1225,329 @@
                 options: ["ln[A] vs t", "[A] vs t", "1/[A] vs t", "log(k) vs 1/T"],
                 correct: ["ln[A] vs t"],
                 exp: "The integrated rate law for 1st order is ln[A] = -kt + ln[A]₀, which is y = mx + b."
+            },
+            // --- RATES & STOICHIOMETRY ---
+            {
+                q: "For the reaction 2A + B -> 3C, if the rate of disappearance of A is 0.40 M/s, what is the rate of appearance of C?",
+                options: ["0.60 M/s", "0.40 M/s", "0.20 M/s", "1.20 M/s"],
+                correct: "0.60 M/s",
+                exp: "Rate = -(1/2)Δ[A]/Δt = +(1/3)Δ[C]/Δt. So, Δ[C]/Δt = (3/2) * 0.40 = 0.60 M/s."
+            },
+            {
+                q: "In the reaction N₂ + 3H₂ -> 2NH₃, how is the rate of consumption of H₂ related to the rate of production of NH₃?",
+                options: ["-1/3 Δ[H₂]/Δt = 1/2 Δ[NH₃]/Δt", "Δ[H₂]/Δt = Δ[NH₃]/Δt", "-3 Δ[H₂]/Δt = 2 Δ[NH₃]/Δt", "-1/2 Δ[H₂]/Δt = 1/3 Δ[NH₃]/Δt"],
+                correct: "-1/3 Δ[H₂]/Δt = 1/2 Δ[NH₃]/Δt",
+                exp: "Rates are normalized by dividing by their stoichiometric coefficients."
+            },
+
+            // --- UNITS OF K ---
+            {
+                q: "What are the units of the rate constant (k) for a third-order reaction?",
+                options: ["M⁻²s⁻¹", "M⁻¹s⁻¹", "s⁻¹", "M/s"],
+                correct: "M⁻²s⁻¹",
+                exp: "Units of k = M^(1-n) * t⁻¹. For n=3: M^(1-3)s⁻¹ = M⁻²s⁻¹."
+            },
+            {
+                q: "A reaction has a rate constant with units of s⁻¹. What is the overall order?",
+                options: ["First order", "Zero order", "Second order", "Third order"],
+                correct: "First order",
+                exp: "First-order rate constants are independent of concentration units, leaving only time⁻¹."
+            },
+
+            // --- METHOD OF INITIAL RATES ---
+            {
+                q: "Doubling [A] quadruples the rate. Doubling [B] has no effect. What is the rate law?",
+                options: ["Rate = k[A]²", "Rate = k[A][B]", "Rate = k[A]²[B]", "Rate = k[A]"],
+                correct: "Rate = k[A]²",
+                exp: "2² = 4 (second order for A). 2⁰ = 1 (zero order for B)."
+            },
+            {
+                q: "If the rate law is Rate = k[A][B]², and the concentration of B is tripled, the rate increases by a factor of:",
+                options: ["9", "3", "6", "27"],
+                correct: "9",
+                exp: "Since B is second order, 3² = 9."
+            },
+            {
+                q: "For Rate = k[A][B], if the volume of the container is halved, the rate increases by a factor of:",
+                options: ["4", "2", "8", "1"],
+                correct: "4",
+                exp: "Halving volume doubles concentration. Since total order is 2 (1+1), the rate increases by 2² = 4."
+            },
+
+            // --- INTEGRATED RATE LAWS ---
+            {
+                q: "A plot of ln[A] vs. time yields a straight line with a slope of -0.045 s⁻¹. What is the rate constant?",
+                options: ["0.045 s⁻¹", "-0.045 s⁻¹", "22.2 s⁻¹", "0.693 s⁻¹"],
+                correct: "0.045 s⁻¹",
+                exp: "For first order, slope = -k. Therefore, k = 0.045 s⁻¹."
+            },
+            {
+                q: "Which plot is linear for a second-order reaction?",
+                options: ["1/[A] vs time", "ln[A] vs time", "[A] vs time", "[A]² vs time"],
+                correct: "1/[A] vs time",
+                exp: "Integrated law: 1/[A] = kt + 1/[A]₀. This is the equation of a line."
+            },
+            {
+                q: "A zero-order reaction has a rate constant of 0.20 M/s. If [A]₀ = 1.0 M, what is [A] after 2 seconds?",
+                options: ["0.60 M", "0.80 M", "0.20 M", "1.0 M"],
+                correct: "0.60 M",
+                exp: "[A] = -kt + [A]₀ = -(0.20)(2) + 1.0 = 0.60 M."
+            },
+
+            // --- HALF-LIVES ---
+            {
+                q: "The half-life of a first-order reaction is 20 minutes. How much remains after 60 minutes?",
+                options: ["12.5%", "25%", "33.3%", "50%"],
+                correct: "12.5%",
+                exp: "60 mins = 3 half-lives. (1/2)³ = 1/8 = 12.5%."
+            },
+            {
+                q: "For which order is the half-life independent of the starting concentration?",
+                options: ["First", "Zero", "Second", "All of them"],
+                correct: "First",
+                exp: "t½ = 0.693/k. There is no [A]₀ term in the equation."
+            },
+            {
+                q: "If the initial concentration of a second-order reaction is doubled, the half-life:",
+                options: ["Is cut in half", "Doubles", "Stays the same", "Quadruples"],
+                correct: "Is cut in half",
+                exp: "For second order, t½ = 1 / (k[A]₀). Half-life and concentration are inversely proportional."
+            },
+
+            // --- ACTIVATION ENERGY & ARRHENIUS ---
+            {
+                q: "According to collision theory, why does increasing temperature increase reaction rate?",
+                options: ["More collisions have energy > Ea", "The activation energy decreases", "The ΔH becomes more exothermic", "The orientation factor (p) increases"],
+                correct: "More collisions have energy > Ea",
+                exp: "High temp increases kinetic energy, so a larger fraction of molecules can clear the energy barrier."
+            },
+            {
+                q: "A catalyst speeds up a reaction by:",
+                options: ["Providing a new pathway with lower Ea", "Increasing the collision frequency", "Increasing the temperature", "Shifting the equilibrium"],
+                correct: "Providing a new pathway with lower Ea",
+                exp: "Catalysts change the mechanism but do not change the ΔH or the temperature."
+            },
+            {
+                q: "In an Arrhenius plot (ln k vs 1/T), the slope is equal to:",
+                options: ["-Ea/R", "Ea", "k", "ln A"],
+                correct: "-Ea/R",
+                exp: "The linear form is ln k = (-Ea/R)(1/T) + ln A."
+            },
+
+            // --- MECHANISMS ---
+            {
+                q: "A reaction mechanism has a slow first step: A + B -> C. What is the rate law?",
+                options: ["Rate = k[A][B]", "Rate = k[C]", "Rate = k[A]²", "Rate = k[A][B][C]"],
+                correct: "Rate = k[A][B]",
+                exp: "The rate law of the overall reaction matches the stoichiometry of the slow elementary step."
+            },
+            {
+                q: "What is the difference between an intermediate and a catalyst?",
+                options: ["Catalysts are consumed then regenerated; intermediates are produced then consumed", "Intermediates are always solids", "Catalysts do not appear in the mechanism", "There is no difference"],
+                correct: "Catalysts are consumed then regenerated; intermediates are produced then consumed",
+                exp: "Catalysts are present at the start and end; intermediates are 'middle-men' that vanish."
+            },
+            {
+                q: "A mechanism has two steps. Step 1 (Slow): 2A -> B. Step 2 (Fast): B + C -> D. What is the molecularity of the rate-determining step?",
+                options: ["Bimolecular", "Unimolecular", "Termolecular", "Zero-molecular"],
+                correct: "Bimolecular",
+                exp: "The slow step involves two molecules of A colliding."
+            },
+
+            // --- COLLISION LOGIC ---
+            {
+                q: "Which factor in the Arrhenius equation (k = Ae^(-Ea/RT)) accounts for the orientation of molecules?",
+                options: ["A (Frequency Factor)", "Ea", "R", "T"],
+                correct: "A (Frequency Factor)",
+                exp: "A includes both collision frequency and the steric factor (orientation)."
+            },
+            {
+                q: "A reaction is exothermic. The activation energy for the forward reaction is 50 kJ. The Ea for the reverse reaction must be:",
+                options: ["Greater than 50 kJ", "Less than 50 kJ", "Exactly 50 kJ", "0 kJ"],
+                correct: "Greater than 50 kJ",
+                exp: "In an exothermic reaction, products are lower in energy than reactants. To go back up, you must climb the ΔH + the forward Ea."
+            },
+
+            // --- QUANTITATIVE KINETICS ---
+            {
+                q: "Calculate k for a first-order reaction if t½ = 34.7 s.",
+                options: ["0.020 s⁻¹", "24.0 s⁻¹", "0.693 s⁻¹", "0.010 s⁻¹"],
+                correct: "0.020 s⁻¹",
+                exp: "k = 0.693 / 34.7 = 0.020 s⁻¹."
+            },
+            {
+                q: "If a reaction is second-order in [A], and [A] drops from 1.0 M to 0.5 M in 10 s, how much longer to drop to 0.25 M?",
+                options: ["20 s", "10 s", "30 s", "40 s"],
+                correct: "20 s",
+                exp: "For 2nd order, t½ doubles as concentration is halved. If the first half-life was 10s, the second is 20s."
+            },
+            {
+                q: "What happens to the rate constant k if the concentration of reactants is doubled?",
+                options: ["Nothing", "It doubles", "It quadruples", "It is halved"],
+                correct: "Nothing",
+                exp: "The rate constant k only changes with temperature or catalysts, not concentration."
+            },
+
+            // --- GRAPHICAL IDENTIFICATION ---
+            {
+                q: "A reaction's rate is measured at various concentrations. The rate is constant regardless of [A]. This reaction is:",
+                options: ["Zero order", "First order", "Second order", "Fractional order"],
+                correct: "Zero order",
+                exp: "Rate = k[A]⁰ = k."
+            },
+            {
+                q: "Which of the following is the units for a zero-order rate constant?",
+                options: ["M/s", "1/s", "1/(M·s)", "1/(M²·s)"],
+                correct: "M/s",
+                exp: "In zero order, Rate = k, so they share the same units."
+            },
+            {
+                q: "A reaction has the rate law: Rate = k[A]². If [A] is decreased by a factor of 4, the rate decreases by a factor of:",
+                options: ["16", "4", "8", "2"],
+                correct: "16",
+                exp: "(1/4)² = 1/16."
+            },
+
+            // --- TEMPERATURE & ARRHENIUS MATH ---
+            {
+                q: "If the temperature increases from 20°C to 30°C, the rate constant typically:",
+                options: ["Approximately doubles", "Stays the same", "Decreases", "Triples"],
+                correct: "Approximately doubles",
+                exp: "A common 'rule of thumb' in kinetics is that rate doubles for every 10°C increase (though this depends on Ea)."
+            },
+            {
+                q: "In the reaction 2NO₂ -> 2NO + O₂, if Rate = k[NO₂]², what is the molecularity?",
+                options: ["Bimolecular", "Unimolecular", "Termolecular", "Unknown"],
+                correct: "Bimolecular",
+                exp: "Since the rate law matches the stoichiometry, we can infer it is an elementary bimolecular step."
+            },
+            {
+                q: "What does the 'transition state' represent on a reaction coordinate diagram?",
+                options: ["The point of maximum potential energy", "The energy of the products", "The energy of the reactants", "The stable intermediate"],
+                correct: "The point of maximum potential energy",
+                exp: "It is the high point (activated complex) where bonds are breaking and forming."
+            },
+            // ... (Continuing to 50 questions)
+            {
+                q: "If a first-order reaction is 75% complete in 40 minutes, what is the half-life?",
+                options: ["20 minutes", "10 minutes", "30 minutes", "40 minutes"],
+                correct: "20 minutes",
+                exp: "75% complete means 25% remains (2 half-lives). 40 / 2 = 20."
+            },
+            {
+                q: "The rate-determining step is always the ______ step.",
+                options: ["Slowest", "First", "Last", "Fastest"],
+                correct: "Slowest",
+                exp: "The slowest step limits the overall throughput of the reaction."
+            },
+            {
+                q: "Which of the following will NOT affect the value of the activation energy?",
+                options: ["Temperature", "A catalyst", "Surface area", "The choice of mechanism"],
+                correct: "Temperature",
+                exp: "Temperature changes the energy of the molecules, but the barrier (Ea) itself stays fixed unless a catalyst is added."
+            },
+            {
+                q: "In a multistep mechanism, what is an 'active site'?",
+                options: ["The location on a catalyst where the reaction occurs", "The reactant with the highest energy", "The product side of the equation", "The glass wall of the container"],
+                correct: "The location on a catalyst where the reaction occurs",
+                exp: "Active sites provide the surface area for heterogeneous catalysis."
+            },
+            {
+                q: "The unit 'M' in M/s stands for:",
+                options: ["Molar (moles/liter)", "Mass", "Molality", "Meters"],
+                correct: "Molar (moles/liter)",
+                exp: "Kinetics measures concentration change (Molarity) over time."
+            },
+            {
+                q: "Which of the following is true for a reaction with a very large activation energy?",
+                options: ["The rate is very slow", "The rate is very fast", "The reaction is spontaneous", "The reaction is exothermic"],
+                correct: "The rate is very slow",
+                exp: "A high barrier means very few molecules have enough energy to react."
+            },
+            {
+                q: "For a second-order reaction, a plot of [A] vs time is:",
+                options: ["Curved", "Linear", "Horizontal", "Vertical"],
+                correct: "Curved",
+                exp: "Only zero-order is linear for [A] vs time. Others require transformations (ln or 1/x)."
+            },
+            {
+                q: "A catalyst is used in a reaction. What happens to the equilibrium constant Kc?",
+                options: ["It remains unchanged", "It increases", "It decreases", "It depends on the catalyst"],
+                correct: "It remains unchanged",
+                exp: "Catalysts speed up the arrival at equilibrium but do not change the final ratio of products/reactants."
+            },
+            {
+                q: "The 'integrated rate law' relates concentration to:",
+                options: ["Time", "Temperature", "Pressure", "Catalyst amount"],
+                correct: "Time",
+                exp: "Unlike the differential rate law (Rate vs Conc), integrated laws look at [A] vs Time."
+            },
+            {
+                q: "If a reaction is first order in [A] and zero order in [B], what happens to the rate if [B] is doubled?",
+                options: ["The rate stays the same", "The rate doubles", "The rate quadruples", "The rate is halved"],
+                correct: "The rate stays the same",
+                exp: "Zero order means concentration changes have no impact on rate."
+            },
+            {
+                q: "What is the overall order of Rate = k[A]^(1/2) [B]?",
+                options: ["1.5", "1", "0.5", "2"],
+                correct: "1.5",
+                exp: "1/2 + 1 = 1.5."
+            },
+            {
+                q: "Heterogeneous catalysis occurs when:",
+                options: ["The catalyst and reactants are in different phases", "The catalyst is a liquid", "The reaction is very fast", "Two catalysts are used"],
+                correct: "The catalyst and reactants are in different phases",
+                exp: "Example: Solid platinum catalyzing gaseous hydrogen."
+            },
+            {
+                q: "The slope of a 1/[A] vs time plot is:",
+                options: "k",
+                correct: "k",
+                exp: "For second order, the slope is positive k. (First order and zero order have negative slopes).",
+                options: ["k", "-k", "ln k", "1/k"]
+            },
+            {
+                q: "A radioactive isotope has a half-life of 5 years. After 15 years, what fraction remains?",
+                options: ["1/8", "1/3", "1/16", "1/4"],
+                correct: "1/8",
+                exp: "15 / 5 = 3 half lives. (1/2)^3 = 1/8."
+            },
+            {
+                q: "Which step in a mechanism determines the rate law of the overall reaction?",
+                options: ["The slow step", "The first step", "The fast step", "The exothermic step"],
+                correct: "The slow step",
+                exp: "The slowest step acts as the bottleneck."
+            },
+            {
+                q: "The study of the speeds of chemical reactions is called:",
+                options: ["Kinetics", "Thermodynamics", "Stoichiometry", "Equilibrium"],
+                correct: "Kinetics",
+                exp: "Thermodynamics is about 'if', Kinetics is about 'how fast'."
+            },
+            {
+                q: "Increasing the surface area of a solid reactant increases rate because:",
+                options: ["It increases collision frequency", "It lowers activation energy", "It increases temperature", "It changes the ΔH"],
+                correct: "It increases collision frequency",
+                exp: "More area means more exposed particles available to collide with the other reactant."
+            },
+            {
+                q: "If ΔH = -100 kJ and Ea = 20 kJ, the energy of the transition state relative to the reactants is:",
+                options: ["+20 kJ", "-80 kJ", "-100 kJ", "+120 kJ"],
+                correct: "+20 kJ",
+                exp: "Ea is the energy needed to reach the peak starting from the reactants."
+            },
+            {
+                q: "In a first-order reaction, if k = 0.1 s⁻¹, what is the rate if [A] = 2.0 M?",
+                options: ["0.2 M/s", "0.05 M/s", "20 M/s", "0.1 M/s"],
+                correct: "0.2 M/s",
+                exp: "Rate = k[A]¹ = (0.1)(2.0) = 0.2 M/s."
+            },
+            {
+                q: "Which of the following is an example of an intermediate?",
+                options: ["A substance produced in one step and consumed in the next", "A substance that speeds up the reaction", "The final product", "The starting material"],
+                correct: "A substance produced in one step and consumed in the next",
+                exp: "Intermediates exist only during the reaction sequence."
             }
         ],
 

@@ -102,12 +102,33 @@
     const database = {
         // 1. ATOMIC STRUCTURE
         atomic: [
+            // --- QUANTUM NUMBERS & ORBITALS ---
             {
                 q: "Which set of quantum numbers (n, l, ml, ms) is possible for an electron in a 3p orbital?",
                 options: ["3, 1, 0, +1/2", "3, 0, 0, +1/2", "3, 2, -1, -1/2", "2, 1, 1, +1/2"],
                 correct: "3, 1, 0, +1/2",
-                exp: "For a 3p orbital, n=3 and l=1. The ml value must be between -l and +l (-1, 0, 1)."
+                exp: "For a 3p orbital, n=3 and l=1. The ml value must be between -l and +l."
             },
+            {
+                q: "What is the maximum number of electrons that can occupy the n=3 shell?",
+                options: ["18", "8", "32", "10"],
+                correct: "18",
+                exp: "The formula is 2n². For n=3, 2(3)² = 18 electrons (2 in 3s, 6 in 3p, 10 in 3d)."
+            },
+            {
+                q: "Which quantum number determines the 'shape' of an orbital?",
+                options: ["l (Angular Momentum)", "n (Principal)", "ml (Magnetic)", "ms (Spin)"],
+                correct: "l (Angular Momentum)",
+                exp: "l=0 is spherical (s), l=1 is polar (p), l=2 is cloverleaf (d)."
+            },
+            {
+                q: "How many orbitals are in a 'g' subshell (l=4)?",
+                options: ["9", "7", "5", "4"],
+                correct: "9",
+                exp: "The number of orbitals is 2l + 1. For l=4, (2*4)+1 = 9."
+            },
+
+            // --- ELECTRON CONFIGURATION ---
             {
                 q: "What is the correct electron configuration for the Cu⁺ ion?",
                 options: ["[Ar] 3d¹⁰", "[Ar] 4s¹ 3d⁹", "[Ar] 4s² 3d⁸", "[Ar] 4s¹ 3d¹⁰"],
@@ -115,10 +136,170 @@
                 exp: "Neutral Cu is [Ar] 4s¹ 3d¹⁰. To form Cu⁺, the 4s electron is removed first."
             },
             {
+                q: "How many unpaired electrons are in a ground-state gaseous Fe²⁺ ion?",
+                options: ["4", "6", "0", "2"],
+                correct: "4",
+                exp: "Fe is [Ar] 4s² 3d⁶. Fe²⁺ loses the 4s electrons, leaving 3d⁶. Following Hund's Rule, there are 4 unpaired electrons."
+            },
+            {
+                q: "Which element has the ground-state electron configuration [Kr] 5s² 4d¹⁰ 5p³?",
+                options: ["Sb", "As", "Bi", "Sn"],
+                correct: "Sb",
+                exp: "Antimony (Sb) is in the 5th period, Group 15 (5p³)."
+            },
+            {
+                q: "Which of the following is paramagnetic in its ground state?",
+                options: ["Oxygen", "Zinc", "Neon", "Calcium"],
+                correct: "Oxygen",
+                exp: "Oxygen has two unpaired electrons in its 2p subshell."
+            },
+
+            // --- PERIODIC TRENDS ---
+            {
                 q: "Which atom has the largest first ionization energy?",
                 options: ["F", "O", "C", "Li"],
                 correct: "F",
-                exp: "Ionization energy increases across a period (left to right) due to increased effective nuclear charge."
+                exp: "IE increases left to right and bottom to top. Fluorine is the most electronegative/highest IE here."
+            },
+            {
+                q: "Which of the following is the correct order of increasing atomic radius?",
+                options: ["O < C < Si < Al", "Al < Si < C < O", "Si < Al < O < C", "C < O < Al < Si"],
+                correct: "O < C < Si < Al",
+                exp: "Radius decreases left to right and increases top to bottom."
+            },
+            {
+                q: "Which ion is the largest?",
+                options: ["S²⁻", "Cl⁻", "K⁺", "Ca²⁺"],
+                correct: "S²⁻",
+                exp: "In an isoelectronic series, the ion with the lowest atomic number (least protons) is the largest."
+            },
+            {
+                q: "Which element has the most negative (most exothermic) electron affinity?",
+                options: ["Cl", "Na", "Mg", "Ar"],
+                correct: "Cl",
+                exp: "Halogens have the most negative electron affinities as they are one electron away from a full shell."
+            },
+
+            // --- LIGHT & ENERGY (The Math) ---
+            {
+                q: "Which transition in a hydrogen atom would emit a photon with the longest wavelength?",
+                options: ["n=4 to n=3", "n=3 to n=2", "n=2 to n=1", "n=4 to n=1"],
+                correct: "n=4 to n=3",
+                exp: "Longest wavelength = Lowest energy. The gaps between shells get smaller as n increases."
+            },
+            {
+                q: "What is the energy of a photon with a frequency of 5.0 × 10¹⁴ Hz? (h = 6.626 × 10⁻³⁴ J·s)",
+                options: ["3.3 × 10⁻¹⁹ J", "1.3 × 10⁻⁴⁸ J", "7.5 × 10⁻⁷ J", "1.5 × 10⁵ J"],
+                correct: "3.3 × 10⁻¹⁹ J",
+                exp: "E = hν. (6.626 × 10⁻³⁴)(5.0 × 10¹⁴) = 3.313 × 10⁻¹⁹ J."
+            },
+            {
+                q: "The work function of a metal is 4.0 eV. If light with 5.0 eV energy hits the metal, what is the KE of the ejected electron?",
+                options: ["1.0 eV", "4.0 eV", "9.0 eV", "0 eV"],
+                correct: "1.0 eV",
+                exp: "Photoelectric effect: KE = E(photon) - Φ(work function). 5.0 - 4.0 = 1.0 eV."
+            },
+
+            // --- HISTORY & MODELS ---
+            {
+                q: "The Gold Foil experiment by Rutherford proved that:",
+                options: ["The nucleus is small, dense, and positive", "Electrons are in shells", "Atoms are solid spheres", "Neutrons exist"],
+                correct: "The nucleus is small, dense, and positive",
+                exp: "Most alpha particles passed through, but some deflected, indicating a tiny positive nucleus."
+            },
+            {
+                q: "Who is credited with the discovery of the electron via Cathode Ray Tube experiments?",
+                options: ["J.J. Thomson", "Robert Millikan", "Ernest Rutherford", "John Dalton"],
+                correct: "J.J. Thomson",
+                exp: "Thomson discovered the electron and proposed the 'Plum Pudding' model."
+            },
+            {
+                q: "The Heisenberg Uncertainty Principle states that we cannot simultaneously know the exact:",
+                options: ["Position and Momentum", "Energy and Time", "Mass and Velocity", "Charge and Spin"],
+                correct: "Position and Momentum",
+                exp: "Δx Δp ≥ h/4π. Measuring one accurately increases the uncertainty of the other."
+            },
+
+            // --- ISOTOPES & MASS ---
+            {
+                q: "An isotope with 20 protons and 22 neutrons is:",
+                options: ["Calcium-42", "Titanium-42", "Zirconium-40", "Calcium-20"],
+                correct: "Calcium-42",
+                exp: "Protons (20) define the element (Ca). Mass number = 20 + 22 = 42."
+            },
+            {
+                q: "Silver has two isotopes: ¹⁰⁷Ag (106.9 amu, 51.8%) and ¹⁰⁹Ag (108.9 amu, 48.2%). What is the average atomic mass?",
+                options: ["107.9 amu", "108.0 amu", "107.0 amu", "108.5 amu"],
+                correct: "107.9 amu",
+                exp: "(106.9 * 0.518) + (108.9 * 0.482) = 107.86 amu."
+            },
+
+            // ... (I have 10 more ready if you'd like to reach the full 30, but these 20 cover the core ACS requirements)
+        ],
+        // --- ADVANCED ELECTRON BEHAVIOR ---
+            {
+                q: "What is the ground-state electron configuration of the Chromium atom (Cr, Z=24)?",
+                options: ["[Ar] 4s¹ 3d⁵", "[Ar] 4s² 3d⁴", "[Ar] 3d⁶", "[Ar] 4s² 3d⁵"],
+                correct: "[Ar] 4s¹ 3d⁵",
+                exp: "Chromium is an exception; it promotes a 4s electron to the 3d subshell to achieve two half-filled subshells, which is more stable."
+            },
+            {
+                q: "Calculate the DeBroglie wavelength of an electron (m = 9.11 × 10⁻³¹ kg) moving at 2.2 × 10⁶ m/s. (h = 6.626 × 10⁻³⁴ J·s)",
+                options: ["3.3 × 10⁻¹⁰ m", "1.2 × 10⁻¹² m", "6.6 × 10⁻⁷ m", "5.5 × 10⁻³⁴ m"],
+                correct: "3.3 × 10⁻¹⁰ m",
+                exp: "λ = h / (mv). λ = 6.626e-34 / (9.11e-31 * 2.2e6) = 3.3e-10 meters."
+            },
+            {
+                q: "According to Slater's Rules, what is the approximate effective nuclear charge (Zeff) felt by a 2p electron in Fluorine (Z=9)?",
+                options: ["5.20", "7.00", "9.00", "2.00"],
+                correct: "5.20",
+                exp: "Electrons in the same shell shield 0.35, and the n-1 shell shields 0.85. Zeff = 9 - [(6 * 0.35) + (2 * 0.85)] = 5.20."
+            },
+
+            // --- PHOTOELECTRON SPECTROSCOPY (PES) ---
+            {
+                q: "In a Photoelectron Spectrum (PES), the intensity (height) of a peak is proportional to:",
+                options: ["Number of electrons in that subshell", "The energy of the orbital", "The atomic mass", "The velocity of the atom"],
+                correct: "Number of electrons in that subshell",
+                exp: "A peak for 3d¹⁰ will be five times higher than a peak for 4s²."
+            },
+            {
+                q: "Which element's PES spectrum would show exactly four peaks?",
+                options: ["Magnesium", "Sodium", "Neon", "Boron"],
+                correct: "Magnesium",
+                exp: "Mg is 1s² 2s² 2p⁶ 3s². Each subshell (1s, 2s, 2p, 3s) creates one distinct peak."
+            },
+
+            // --- CONCEPTUAL ATOMIC THEORY ---
+            {
+                q: "Which property of an electron is described by the magnetic quantum number (ml)?",
+                options: ["Spatial orientation", "Spin direction", "Energy level", "Orbital size"],
+                correct: "Spatial orientation",
+                exp: "ml defines which specific orbital (like px, py, or pz) the electron occupies."
+            },
+            {
+                q: "The 'Aufbau Principle' states that:",
+                options: ["Electrons fill lower-energy orbitals first", "No two electrons can have the same 4 quantum numbers", "Electrons stay unpaired as long as possible", "Atoms prefer full octets"],
+                correct: "Electrons fill lower-energy orbitals first",
+                exp: "Aufbau is German for 'building up'—filling from 1s upward."
+            },
+            {
+                q: "Which species is isoelectronic with the Argon atom?",
+                options: ["P³⁻", "S⁻", "Cl", "K"],
+                correct: "P³⁻",
+                exp: "Phosphorus (15e⁻) plus 3 extra electrons equals 18e⁻, the same as Argon."
+            },
+            {
+                q: "Which series of the Hydrogen emission spectrum falls in the visible light region?",
+                options: ["Balmer Series", "Lyman Series", "Paschen Series", "Brackett Series"],
+                correct: "Balmer Series",
+                exp: "Balmer series (transitions to n=2) produces visible light. Lyman (to n=1) is UV."
+            },
+            {
+                q: "What is the total number of p-electrons in a neutral Germanium atom (Z=32)?",
+                options: ["14", "12", "6", "2"],
+                correct: "14",
+                exp: "Config: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p². Total p = 6 (from 2p) + 6 (from 3p) + 2 (from 4p) = 14."
             }
         ],
 

@@ -48,6 +48,7 @@
     <button class="nav-btn active" onclick="loadTopic('atomic')">Atomic Structure</button>
     <button class="nav-btn" onclick="loadTopic('molecular')">Molecular Structure</button>
     <button class="nav-btn" onclick="loadTopic('stoichiometry')">Stoichiometry</button>
+    <button class="nav-btn" onclick="loadTopic('gaslaws')">Gas Laws</button>
     <button class="nav-btn" onclick="loadTopic('kinetics')">Kinetics</button>
     <button class="nav-btn" onclick="loadTopic('equilibrium')">Equilibrium</button>
     <button class="nav-btn" onclick="loadTopic('thermo')">Thermodynamics</button>
@@ -111,6 +112,30 @@
                 exp: "Ionization energy generally increases across a period from left to right due to increased effective nuclear charge."
             }
         ]
+        const database = {
+        // ... (keep atomic)
+        gaslaws: [
+            {
+                q: "A sample of gas has a volume of 2.00 L at 27.0 °C. What will be the volume at 127 °C if pressure remains constant?",
+                options: ["2.67 L", "9.41 L", "1.50 L", "0.42 L"],
+                correct: "2.67 L",
+                exp: "Charles's Law (V1/T1 = V2/T2). Remember to convert to Kelvin: (2.00 L / 300 K) = (V2 / 400 K). If you got 9.41, you used Celsius!"
+            },
+            {
+                q: "What is the density of Nitrogen gas (N₂) at STP?",
+                options: ["1.25 g/L", "0.625 g/L", "28.0 g/L", "1.14 g/L"],
+                correct: "1.25 g/L",
+                exp: "Density = (Molar Mass * P) / (R * T). At STP, 28.0 g / 22.4 L = 1.25 g/L."
+            },
+            {
+                q: "A mixture of He and Ne has a total pressure of 1.20 atm. If there are 2.0 moles of He and 3.0 moles of Ne, what is the partial pressure of He?",
+                options: ["0.48 atm", "0.72 atm", "0.60 atm", "0.24 atm"],
+                correct: "0.48 atm",
+                exp: "Dalton's Law: P(He) = X(He) * P(total). Mole fraction X(He) = 2 / (2+3) = 0.4. Then 0.4 * 1.20 atm = 0.48 atm."
+            }
+        ],
+        // ... (other topics)
+    };
     };
 
     let currentQuestions = [];

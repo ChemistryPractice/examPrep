@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACS Preparation Hub</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #27ae60; --error: #c0392b; --bg: #f4f7f6; --sidebar-w: 260px; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; display: flex; height: 100vh; overflow: hidden; }
+        
+        /* Sidebar Styles */
+        #sidebar { width: var(--sidebar-w); background: var(--primary); color: white; display: flex; flex-direction: column; padding: 20px; box-shadow: 2px 0 10px rgba(0,0,0,0.1); }
+        #sidebar h2 { font-size: 1.2rem; text-align: center; margin-bottom: 20px; border-bottom: 1px solid #455a64; padding-bottom: 10px; }
+        .nav-btn { background: none; border: 1px solid #455a64; color: white; padding: 12px; margin-bottom: 8px; border-radius: 5px; cursor: pointer; text-align: left; transition: 0.3s; }
+        .nav-btn:hover { background: #34495e; }
+        .nav-btn.active { background: var(--accent); border-color: var(--accent); }
+        .ref-group { margin-top: auto; border-top: 1px solid #455a64; padding-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .ref-btn { background: #7f8c8d; font-size: 0.9rem; }
+
+        /* Main Content Styles */
+        #main-content { flex-grow: 1; padding: 40px; display: flex; flex-direction: column; align-items: center; overflow-y: auto; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); width: 100%; max-width: 700px; position: relative; }
+        h1 { color: var(--primary); margin-top: 0; }
+        
+        .question-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; line-height: 1.5; }
+        .options-list { list-style: none; padding: 0; }
+        .option-item { border: 1px solid #ddd; margin-bottom: 10px; padding: 15px; border-radius: 8px; cursor: pointer; transition: 0.2s; position: relative; }
+        .option-item:hover { background: #f9f9f9; border-color: #bdc3c7; }
+        .option-item.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; }
+        .option-item.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; }
+        
+        .explanation { margin-top: 15px; padding: 15px; border-radius: 8px; background: #e8f4fd; border-left: 5px solid #3498db; display: none; }
+        
+        .controls { display: flex; justify-content: space-between; margin-top: 30px; }
+        .nav-nav-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .nav-nav-btn:disabled { background: #ccc; cursor: not-allowed; }
+
+        /* Reference Overlays */
+        .overlay { display: none; position: fixed; top: 10%; left: 300px; right: 50px; bottom: 10%; background: white; box-shadow: 0 0 50px rgba(0,0,0,0.5); border-radius: 10px; z-index: 100; padding: 20px; border: 2px solid var(--primary); }
+        .overlay-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; margin-bottom: 15px; }
+        .close-btn { background: var(--error); color: white; border: none; padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <h2>ACS Preparation</h2>
+    <button class="nav-btn active" onclick="loadTopic('atomic')">Atomic Structure</button>
+    <button class="nav-btn" onclick="loadTopic('molecular')">Molecular Structure</button>
+    <button class="nav-btn" onclick="loadTopic('stoichiometry')">Stoichiometry</button>
+    <button class="nav-btn" onclick="loadTopic('kinetics')">Kinetics</button>
+    <button class="nav-btn" onclick="loadTopic('equilibrium')">Equilibrium</button>
+    <button class="nav-btn" onclick="loadTopic('thermo')">Thermodynamics</button>
+    <button class="nav-btn" onclick="loadTopic('electro')">Electrochemistry</button>
+
+    <div class="ref-group">
+        <button class="nav-btn ref-btn" onclick="toggleRef('calc')">Calculator</button>
+        <button class="nav-btn ref-btn" onclick="toggleRef('ptable')">Periodic Table</button>
+        <button class="nav-btn ref-btn" onclick="toggleRef('eqn')">Equation Sheet</button>
+    </div>
+</div>
+
+<div id="main-content">
+    <div class="card" id="quiz-container">
+        <h1 id="topic-title">Atomic Structure</h1>
+        <div id="question-area">
+            <div id="q-content"></div>
+            <div id="explanation-area" class="explanation"></div>
+            <div class="controls">
+                <button class="nav-nav-btn" id="prev-btn" onclick="changeQuestion(-1)">Previous</button>
+                <span id="progress-text">Question 1 of 3</span>
+                <button class="nav-nav-btn" id="next-btn" onclick="changeQuestion(1)">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="calc" class="overlay">
+    <div class="overlay-header"><h3>Scientific Calculator</h3><button class="close-btn" onclick="toggleRef('calc')">X</button></div>
+    <p>Calculator Tool Coming Soon - Use system calculator for now.</p>
+</div>
+<div id="ptable" class="overlay">
+    <div class="overlay-header"><h3>Periodic Table</h3><button class="close-btn" onclick="toggleRef('ptable')">X</button></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Periodic_table_large.png" width="100%" alt="Periodic Table">
+</div>
+<div id="eqn" class="overlay">
+    <div class="overlay-header"><h3>Equation Sheet</h3><button class="close-btn" onclick="toggleRef('eqn')">X</button></div>
+    <p>ACS Formula Sheet Image/Content Goes Here.</p>
+</div>
+
+<script>
+    // Database for Proof of Concept
+    const database = {
+        atomic: [
+            {
+                q: "Which set of quantum numbers (n, l, ml, ms) is possible for an electron in a 3p orbital?",
+                options: ["3, 1, 0, +1/2", "3, 0, 0, +1/2", "3, 2, -1, -1/2", "2, 1, 1, +1/2"],
+                correct: "3, 1, 0, +1/2",
+                exp: "For a 3p orbital, n=3 and l=1. The ml value must be between -l and +l (-1, 0, 1)."
+            },
+            {
+                q: "What is the correct electron configuration for the Cu⁺ ion?",
+                options: ["[Ar] 3d¹⁰", "[Ar] 4s¹ 3d⁹", "[Ar] 4s² 3d⁸", "[Ar] 4s¹ 3d¹⁰"],
+                correct: "[Ar] 3d¹⁰",
+                exp: "Neutral Cu is [Ar] 4s¹ 3d¹⁰. When forming a +1 ion, the 4s electron is removed first."
+            },
+            {
+                q: "Which atom has the largest first ionization energy?",
+                options: ["F", "O", "C", "Li"],
+                correct: "F",
+                exp: "Ionization energy generally increases across a period from left to right due to increased effective nuclear charge."
+            }
+        ]
+    };
+
+    let currentQuestions = [];
+    let currentIdx = 0;
+    let answeredQuestions = {}; // To store user's choice for each question
+
+    function loadTopic(topic) {
+        // Toggle Sidebar Active state
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        document.getElementById('topic-title').innerText = topic.charAt(0).toUpperCase() + topic.slice(1);
+        
+        // Randomize 3 questions from database
+        let allQ = database[topic] || [];
+        currentQuestions = allQ.sort(() => 0.5 - Math.random()).slice(0, 3);
+        currentIdx = 0;
+        answeredQuestions = {};
+        renderQuestion();
+    }
+
+    function renderQuestion() {
+        const q = currentQuestions[currentIdx];
+        const qArea = document.getElementById('q-content');
+        const expArea = document.getElementById('explanation-area');
+        
+        expArea.style.display = 'none';
+        document.getElementById('progress-text').innerText = `Question ${currentIdx + 1} of ${currentQuestions.length}`;
+        document.getElementById('prev-btn').disabled = currentIdx === 0;
+        document.getElementById('next-btn').disabled = currentIdx === currentQuestions.length - 1;
+
+        // Shuffle options so correct answer isn't always 'A'
+        if (!q.shuffledOptions) {
+            q.shuffledOptions = [...q.options].sort(() => 0.5 - Math.random());
+        }
+
+        let html = `<p class="question-text">${q.q}</p><ul class="options-list">`;
+        q.shuffledOptions.forEach(opt => {
+            let stateClass = "";
+            if (answeredQuestions[currentIdx]) {
+                if (opt === q.correct) stateClass = "correct";
+                else if (opt === answeredQuestions[currentIdx]) stateClass = "wrong";
+            }
+            html += `<li class="option-item ${stateClass}" onclick="checkAnswer('${opt}')">${opt}</li>`;
+        });
+        html += `</ul>`;
+        
+        qArea.innerHTML = html;
+
+        if (answeredQuestions[currentIdx]) {
+            expArea.innerText = q.exp;
+            expArea.style.display = 'block';
+        }
+    }
+
+    function checkAnswer(choice) {
+        if (answeredQuestions[currentIdx]) return; // Only allow one choice
+        answeredQuestions[currentIdx] = choice;
+        renderQuestion();
+    }
+
+    function changeQuestion(dir) {
+        currentIdx += dir;
+        renderQuestion();
+    }
+
+    function toggleRef(id) {
+        const el = document.getElementById(id);
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // Initialize with Atomic
+    window.onload = () => loadTopic('atomic');
+</script>
+
+</body>
+</html>

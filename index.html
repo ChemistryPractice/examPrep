@@ -322,8 +322,204 @@
                 options: ["NH₃", "BF₃", "CCl₄", "CO₂"],
                 correct: "NH₃",
                 exp: "NH₃ is trigonal pyramidal; the bond dipoles do not cancel out, resulting in a net dipole."
+            },
+            // --- VSEPR & GEOMETRY ---
+            {
+                q: "What is the molecular geometry of the ICl₂⁻ ion?",
+                options: ["Linear", "Bent", "T-shaped", "Square Planar"],
+                correct: "Linear",
+                exp: "Iodine has 7 valence electrons, +1 for the charge = 8. Two Cl bonds and three lone pairs (AX₂E₃) results in a linear molecular geometry."
+            },
+            {
+                q: "Which molecule has a trigonal pyramidal molecular geometry?",
+                options: ["PH₃", "BF₃", "SO₃", "CO₃²⁻"],
+                correct: "PH₃",
+                exp: "Phosphorus has 5 valence electrons. In PH₃, there are 3 bonding pairs and 1 lone pair, creating a pyramid shape."
+            },
+            {
+                q: "What are the ideal bond angles in a molecule with octahedral electron geometry?",
+                options: ["90° and 180°", "109.5°", "120°", "90° and 120°"],
+                correct: "90° and 180°",
+                exp: "Octahedral geometry consists of axes at right angles to each other (90°) and opposite positions at 180°."
+            },
+            {
+                q: "Which species has a 'See-saw' molecular geometry?",
+                options: ["SF₄", "XeF₄", "ClF₃", "CF₄"],
+                correct: "SF₄",
+                exp: "SF₄ has 5 electron domains (4 bonds, 1 lone pair). This is the 'See-saw' orientation of a trigonal bipyramid."
+            },
+
+            // --- HYBRIDIZATION ---
+            {
+                q: "What is the hybridization of the sulfur atom in SO₂?",
+                options: ["sp²", "sp", "sp³", "dsp³"],
+                correct: "sp²",
+                exp: "Sulfur in SO₂ has two bonding domains (double bonds) and one lone pair. 3 domains = sp²."
+            },
+            {
+                q: "A molecule with sp³d² hybridization at the central atom corresponds to which electron geometry?",
+                options: ["Octahedral", "Trigonal Bipyramidal", "Tetrahedral", "Square Planar"],
+                correct: "Octahedral",
+                exp: "sp³d² involves 6 hybrid orbitals, which characteristic of octahedral electron geometry."
+            },
+            {
+                q: "How many sigma (σ) and pi (π) bonds are in a molecule of ethyne (H-C≡C-H)?",
+                options: ["3 σ and 2 π", "2 σ and 3 π", "5 σ and 0 π", "3 σ and 1 π"],
+                correct: "3 σ and 2 π",
+                exp: "Each single bond is a σ. A triple bond consists of 1 σ and 2 π. Total = 3 σ and 2 π."
+            },
+
+            // --- POLARITY & IMFs ---
+            {
+                q: "Which of the following molecules has a net dipole moment (is polar)?",
+                options: ["SF₄", "CF₄", "XeF₄", "CO₂"],
+                correct: "SF₄",
+                exp: "SF₄ is asymmetrical due to its lone pair (See-saw). The others are highly symmetrical, so their dipoles cancel."
+            },
+            {
+                q: "Which substance would you expect to have the highest boiling point?",
+                options: ["CH₃OH", "CH₄", "CH₃CH₃", "CH₃Cl"],
+                correct: "CH₃OH",
+                exp: "Methanol (CH₃OH) exhibits Hydrogen Bonding, which is significantly stronger than the dispersion forces or dipole-dipole forces in the others."
+            },
+            {
+                q: "What is the formal charge on the central nitrogen atom in the azide ion (N₃⁻)?",
+                options: ["+1", "0", "-1", "+2"],
+                correct: "+1",
+                exp: "In the most stable resonance structure [N=N=N]⁻, the central N has 4 bonds and 0 lone pairs. FC = 5 - (4 + 0) = +1."
+            },
+
+            // --- BONDING THEORY ---
+            {
+                q: "According to Molecular Orbital (MO) theory, what is the bond order of the O₂ molecule?",
+                options: ["2", "1", "1.5", "2.5"],
+                correct: "2",
+                exp: "O₂ has 12 valence electrons in its MO diagram. (8 bonding - 4 antibonding) / 2 = 2."
+            },
+            {
+                q: "Which property is associated with a paramagnetic molecule?",
+                options: ["Attracted to a magnetic field", "Repelled by a magnetic field", "Has only paired electrons", "Is always polar"],
+                correct: "Attracted to a magnetic field",
+                exp: "Paramagnetism is caused by the presence of one or more unpaired electrons, which are attracted to magnetic fields."
+            },
+            {
+                q: "As the bond order between two atoms increases, the bond length _______ and the bond energy _______.",
+                options: ["decreases, increases", "increases, decreases", "increases, increases", "decreases, decreases"],
+                correct: "decreases, increases",
+                exp: "Higher bond order (e.g., triple vs single) means the atoms are pulled closer (shorter) and held more tightly (stronger)."
+            },
+            {
+                q: "What is the molecular geometry of XeF₂?",
+                options: ["Linear", "Bent", "T-shaped", "Trigonal Planar"],
+                correct: "Linear",
+                exp: "XeF₂ has 5 electron domains (2 bonds, 3 lone pairs). The lone pairs occupy the equatorial positions, leaving the F-Xe-F bond linear."
+            },
+            {
+                q: "Which molecule contains at least one sp² hybridized carbon atom?",
+                options: ["C₂H₄", "C₂H₆", "C₂H₂", "CH₄"],
+                correct: "C₂H₄",
+                exp: "Ethene (C₂H₄) contains a carbon-carbon double bond. Each carbon has 3 domains, which is sp²."
+            },
+            // --- RESONANCE & FORMAL CHARGE ---
+            {
+                q: "Which molecule or ion exhibits resonance?",
+                options: ["SO₃", "CH₄", "NH₄⁺", "H₂O"],
+                correct: "SO₃",
+                exp: "Sulfur trioxide has three equivalent potential locations for the double bond, resulting in resonance."
+            },
+            {
+                q: "What is the formal charge on the central phosphorus atom in the phosphate ion (PO₄³⁻) if the octet rule is satisfied?",
+                options: ["+1", "0", "-1", "+5"],
+                correct: "+1",
+                exp: "With 4 single bonds and no lone pairs, FC = 5 - (4 + 0) = +1. (Note: In some models where P expands its octet, the FC could be 0, but ACS often tests the octet version first)."
+            },
+            {
+                q: "How many resonance structures can be drawn for the nitrate ion (NO₃⁻)?",
+                options: ["3", "2", "4", "1"],
+                correct: "3",
+                exp: "There are three oxygen atoms that can each take the double bond position, creating three equivalent resonance structures."
+            },
+
+            // --- DEVIATIONS FROM IDEAL ANGLES ---
+            {
+                q: "Which molecule has the smallest bond angle?",
+                options: ["H₂O", "NH₃", "CH₄", "CO₂"],
+                correct: "H₂O",
+                exp: "All are based on tetrahedral geometry except CO₂. H₂O has 2 lone pairs which push the bonds closer together (~104.5°) than NH₃ (1 lone pair, ~107°)."
+            },
+            {
+                q: "The bond angles in ClF₃ are slightly less than:",
+                options: ["90° and 180°", "109.5°", "120°", "180° only"],
+                correct: "90° and 180°",
+                exp: "ClF₃ is T-shaped (from a trigonal bipyramid). The two axial lone pairs compress the 90° and 180° angles."
+            },
+
+            // --- MOLECULAR ORBITAL THEORY & BOND ORDER ---
+            {
+                q: "According to MO theory, which of the following is diamagnetic?",
+                options: ["N₂", "O₂", "B₂", "NO"],
+                correct: "N₂",
+                exp: "N₂ has 10 valence electrons. In its MO diagram, all electrons are paired. O₂ and B₂ are famously paramagnetic."
+            },
+            {
+                q: "What is the bond order of the He₂⁺ ion?",
+                options: ["0.5", "0", "1", "1.5"],
+                correct: "0.5",
+                exp: "He₂⁺ has 3 electrons. (2 bonding - 1 antibonding) / 2 = 0.5."
+            },
+            {
+                q: "Which molecule has a bond order of 3?",
+                options: ["N₂", "O₂", "F₂", "Li₂"],
+                correct: "N₂",
+                exp: "Nitrogen has a triple bond (1 sigma, 2 pi), giving it a bond order of 3."
+            },
+
+            // --- LONE PAIR EFFECTS ---
+            {
+                q: "Which species has the same molecular geometry as the ClO₃⁻ ion?",
+                options: ["SO₃²⁻", "CO₃²⁻", "NO₃⁻", "SO₃"],
+                correct: "SO₃²⁻",
+                exp: "Both ClO₃⁻ and SO₃²⁻ have 26 valence electrons, resulting in 3 bonds and 1 lone pair (Trigonal Pyramidal)."
+            },
+            {
+                q: "In the VSEPR model, which type of repulsion is strongest?",
+                options: ["Lone pair-Lone pair", "Lone pair-Bonding pair", "Bonding pair-Bonding pair", "All are equal"],
+                correct: "Lone pair-Lone pair",
+                exp: "Lone pairs occupy more space than bonding pairs, leading to LP-LP > LP-BP > BP-BP repulsion."
+            },
+
+            // --- HYBRIDIZATION & GEOMETRY MIX ---
+            {
+                q: "Which molecule contains an atom with sp³ hybridization?",
+                options: ["H₂O", "C₂H₂", "CO₂", "BF₃"],
+                correct: "H₂O",
+                exp: "Oxygen in H₂O has 4 electron domains (2 bonds, 2 lone pairs), requiring sp³ hybridization."
+            },
+            {
+                q: "What is the hybridization of the central atom in BrF₅?",
+                options: ["sp³d²", "sp³d", "sp³", "sp²"],
+                correct: "sp³d²",
+                exp: "Bromine has 7 valence electrons + 5 from Fluorine = 12 (6 domains). 6 domains = sp³d²."
+            },
+            {
+                q: "Which molecule is nonpolar despite having polar bonds?",
+                options: ["BeCl₂", "H₂O", "NH₃", "PCl₃"],
+                correct: "BeCl₂",
+                exp: "BeCl₂ is linear. The two equal and opposite bond dipoles cancel out, making the molecule nonpolar."
+            },
+            {
+                q: "How many pi (π) bonds are in the molecule CO₂?",
+                options: ["2", "1", "0", "4"],
+                correct: "2",
+                exp: "CO₂ has two double bonds (O=C=O). Each double bond contains 1 sigma and 1 pi bond. Total = 2 pi bonds."
+            },
+            {
+                q: "Which orbital overlap forms the sigma bond in H₂?",
+                options: ["s-s", "s-p", "p-p", "sp-sp"],
+                correct: "s-s",
+                exp: "Hydrogen only has a 1s orbital available for bonding."
             }
-        ],
+        ],  // End of Molecular
 
         // 3. STOICHIOMETRY
         stoichiometry: [
@@ -493,7 +689,7 @@
         
         // Randomize 3 questions from database
         let allQ = database[topic] || [];
-        currentQuestions = allQ.sort(() => 0.5 - Math.random()).slice(0, 3);
+        currentQuestions = allQ.sort(() => 0.5 - Math.random()).slice(0, 5);
         currentIdx = 0;
         answeredQuestions = {};
         renderQuestion();

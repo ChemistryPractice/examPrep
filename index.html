@@ -48,6 +48,7 @@
     <button class="nav-btn active" onclick="loadTopic('atomic')">Atomic Structure</button>
     <button class="nav-btn" onclick="loadTopic('molecular')">Molecular Structure</button>
     <button class="nav-btn" onclick="loadTopic('stoichiometry')">Stoichiometry</button>
+    <button class="nav-btn" onclick="loadTopic('solutions')">Solution Chemistry</button>
     <button class="nav-btn" onclick="loadTopic('gaslaws')">Gas Laws</button>
     <button class="nav-btn" onclick="loadTopic('kinetics')">Kinetics</button>
     <button class="nav-btn" onclick="loadTopic('equilibrium')">Equilibrium</button>
@@ -273,7 +274,28 @@
                 correct: "Spontaneous",
                 exp: "A positive cell potential corresponds to a negative Gibbs Free Energy (ΔG = -nFE)."
             }
-        ]
+        ],
+        // 9. SOLUTION CHEMISTRY
+        solutions: [
+            {
+                q: "What is the molarity of a solution made by dissolving 5.85 g of NaCl (MM = 58.5) in enough water to make 500. mL of solution?",
+                options: ["0.200 M", "0.100 M", "0.500 M", "2.00 M"],
+                correct: "0.200 M",
+                exp: "Molarity = moles / Liters. (5.85 g / 58.5 g/mol) = 0.100 mol. Then 0.100 mol / 0.500 L = 0.200 M."
+            },
+            {
+                q: "Which of the following 0.10 M aqueous solutions will have the lowest freezing point?",
+                options: ["AlCl₃", "MgCl₂", "NaCl", "C₆H₁₂O₆"],
+                correct: "AlCl₃",
+                exp: "Colligative properties depend on the number of particles. AlCl₃ dissociates into 4 ions (i=4), creating the greatest freezing point depression."
+            },
+            {
+                q: "What volume of 12.0 M HCl is required to prepare 2.0 L of 0.50 M HCl?",
+                options: ["83 mL", "120 mL", "3.0 L", "48 mL"],
+                correct: "83 mL",
+                exp: "Use M1V1 = M2V2: (12.0 M)(V1) = (0.50 M)(2.0 L). V1 = 0.0833 L, which is 83.3 mL."
+            }
+        ],
     };
    
 

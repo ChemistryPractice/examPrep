@@ -540,7 +540,336 @@
                 options: ["5.00 g", "20.0 g", "2.50 g", "10.0 g"],
                 correct: "5.00 g",
                 exp: "Moles = M * V = 0.500 * 0.250 = 0.125 mol. Mass = 0.125 * 40.0 = 5.00 g."
-            }
+            },
+           // --- BASICS: MOLAR MASS & PERCENT COMPOSITION ---
+            {
+                q: "What is the molar mass of (NH₄)₂SO₄?",
+                options: ["132.1 g/mol", "114.1 g/mol", "118.1 g/mol", "128.1 g/mol"],
+                correct: "132.1 g/mol",
+                exp: "2(14.01) + 8(1.008) + 32.06 + 4(16.00) = 132.14 g/mol."
+            },
+            {
+                q: "What is the mass percent of Oxygen in KClO₃ (MM = 122.5)?",
+                options: ["39.2%", "13.1%", "48.0%", "24.5%"],
+                correct: "39.2%",
+                exp: "(3 * 16.00) / 122.55 = 39.17%."
+            },
+            {
+                q: "A compound is 40.0% C, 6.7% H, and 53.3% O by mass. What is its empirical formula?",
+                options: ["CH₂O", "CHO", "C₂H₄O₂", "CH₃O"],
+                correct: "CH₂O",
+                exp: "Moles: C=40/12=3.33, H=6.7/1=6.7, O=53.3/16=3.33. Ratio is 1:2:1."
+            },
+            {
+                q: "How many phosphorus atoms are in 2.50 moles of P₄O₁₀?",
+                options: ["6.02 × 10²⁴ atoms", "1.51 × 10²⁴ atoms", "2.41 × 10²³ atoms", "1.00 × 10¹ atoms"],
+                correct: "6.02 × 10²⁴ atoms",
+                exp: "2.50 mol * (4 atoms P / 1 molecule) * (6.022e23) = 6.022e24 atoms."
+            },
+            {
+                q: "Which sample contains the greatest number of moles of atoms?",
+                options: ["1.0 g of H₂", "1.0 g of O₂", "1.0 g of Li", "1.0 g of Au"],
+                correct: "1.0 g of H₂",
+                exp: "Lower molar mass means more moles for the same mass. 1g H2 is ~0.5 mol H2 (1.0 mol atoms)."
+            },
+
+            // --- REACTION MATH (MASS-MASS) ---
+            {
+                q: "In the reaction 2H₂ + O₂ -> 2H₂O, how many grams of H₂O are produced from 4.0 g of H₂?",
+                options: ["36 g", "18 g", "4.0 g", "72 g"],
+                correct: "36 g",
+                exp: "4.0g H2 = 2 moles. Ratio H2:H2O is 2:2 (1:1). So 2 moles H2O = 36g."
+            },
+            {
+                q: "How many moles of AlCl₃ are produced from 6.0 moles of Cl₂? (2Al + 3Cl₂ -> 2AlCl₃)",
+                options: ["4.0 mol", "6.0 mol", "9.0 mol", "2.0 mol"],
+                correct: "4.0 mol",
+                exp: "6.0 mol Cl₂ * (2 mol AlCl₃ / 3 mol Cl₂) = 4.0 mol."
+            },
+            {
+                q: "What mass of Fe₂O₃ (159.7 g/mol) is required to produce 100. g of Fe?",
+                options: ["143 g", "71.5 g", "200 g", "112 g"],
+                correct: "143 g",
+                exp: "100g Fe = 1.79 mol Fe. Requires 0.895 mol Fe2O3. 0.895 * 159.7 = 143g."
+            },
+            {
+                q: "If 0.50 moles of BaCl₂ react with excess AgNO₃, how many moles of AgCl precipitate?",
+                options: ["1.0 mol", "0.50 mol", "2.0 mol", "0.25 mol"],
+                correct: "1.0 mol",
+                exp: "BaCl₂ + 2AgNO₃ -> 2AgCl + Ba(NO₃)₂. Ratio is 1:2."
+            },
+
+            // --- LIMITING REACTANTS & YIELD ---
+            {
+                q: "If 2.0 mol of N₂ and 3.0 mol of H₂ react (N₂ + 3H₂ -> 2NH₃), what is the limiting reactant?",
+                options: ["H₂", "N₂", "NH₃", "Both are limiting"],
+                correct: "H₂",
+                exp: "2 mol N₂ needs 6 mol H₂. We only have 3. H₂ runs out first."
+            },
+            {
+                q: "What is the maximum mass of H₂O produced from 10.0 g H₂ and 10.0 g O₂?",
+                options: ["11.3 g", "90.0 g", "10.0 g", "20.0 g"],
+                correct: "11.3 g",
+                exp: "10g O₂ is the limiting reactant (0.312 mol). Produces 0.625 mol H₂O = 11.3g."
+            },
+            {
+                q: "A reaction has a theoretical yield of 50.0 g but only produces 38.5 g. What is the percent yield?",
+                options: ["77.0%", "130%", "88.5%", "62.0%"],
+                correct: "77.0%",
+                exp: "(38.5 / 50.0) * 100 = 77.0%."
+            },
+            {
+                q: "In a limiting reactant problem, the theoretical yield is determined by:",
+                options: ["The reactant that produces the least product", "The reactant with the smallest mass", "The reactant with the smallest coefficient", "The actual yield"],
+                correct: "The reactant that produces the least product",
+                exp: "The limiting reactant is the one that runs out first and restricts the amount of product."
+            },
+
+            // --- SOLUTIONS STOICHIOMETRY ---
+            {
+                q: "How many grams of NaOH (MM=40.0) are needed to make 250 mL of 0.500 M solution?",
+                options: ["5.00 g", "20.0 g", "2.50 g", "10.0 g"],
+                correct: "5.00 g",
+                exp: "0.250 L * 0.500 mol/L = 0.125 mol. 0.125 * 40.0 = 5.00g."
+            },
+            {
+                q: "What volume of 0.100 M HCl is needed to neutralize 25.0 mL of 0.200 M NaOH?",
+                options: ["50.0 mL", "12.5 mL", "25.0 mL", "100 mL"],
+                correct: "50.0 mL",
+                exp: "M1V1 = M2V2 (for 1:1 ratio). (0.100)V1 = (0.200)(25.0). V1 = 50.0 mL."
+            },
+            {
+                q: "If 50.0 mL of 1.0 M NaCl is diluted to 500. mL, what is the new molarity?",
+                options: ["0.10 M", "0.05 M", "0.50 M", "2.0 M"],
+                correct: "0.10 M",
+                exp: "M1V1 = M2V2. (1.0)(50) = (M2)(500). M2 = 0.10 M."
+            },
+
+            // --- COMBUSTION & HYDRATES ---
+            {
+                q: "A 10.0 g sample of a hydrate of MgSO₄ is heated to remove water. 4.88 g of anhydrous MgSO₄ remains. What is the formula?",
+                options: ["MgSO₄ · 7H₂O", "MgSO₄ · 5H₂O", "MgSO₄ · 2H₂O", "MgSO₄ · H₂O"],
+                correct: "MgSO₄ · 7H₂O",
+                exp: "Mass water = 5.12g (0.284 mol). Mass MgSO₄ = 4.88g (0.0405 mol). Ratio 7:1."
+            },
+            {
+                q: "Combustion of a hydrocarbon produces 33.0 g CO₂ and 18.0 g H₂O. What is the empirical formula?",
+                options: ["C₃H₈", "CH₂", "C₂H₆", "CH₄"],
+                correct: "C₃H₈",
+                exp: "33g CO₂ = 0.75 mol C. 18g H₂O = 2.0 mol H. Ratio 0.75:2.0 is 3:8."
+            },
+
+            // --- GAS STOICHIOMETRY ---
+            {
+                q: "What volume of H₂ gas at STP is produced from 2.43 g of Mg reacting with HCl?",
+                options: ["2.24 L", "22.4 L", "1.12 L", "4.48 L"],
+                correct: "2.24 L",
+                exp: "2.43g Mg = 0.10 mol. Ratio Mg:H₂ is 1:1. 0.10 mol * 22.4 L/mol = 2.24 L."
+            },
+
+            // --- MORE PERCENT COMP & EMPIRICAL ---
+            {
+                q: "What is the empirical formula of a compound that is 85.6% C and 14.4% H?",
+                options: ["CH₂", "CH", "CH₃", "C₂H₅"],
+                correct: "CH₂",
+                exp: "85.6/12 = 7.13 mol C. 14.4/1 = 14.4 mol H. Ratio 1:2."
+            },
+            {
+                q: "A molecular formula has an empirical formula of CH₂ and a molar mass of 56 g/mol. What is it?",
+                options: ["C₄H₈", "C₃H₆", "C₂H₄", "C₅H₁₀"],
+                correct: "C₄H₈",
+                exp: "Empirical mass (CH₂) = 14. 56 / 14 = 4. Multiply CH₂ by 4."
+            },
+            {
+                q: "Calculate the mass of 4.50 × 10²² molecules of CH₄ (MM=16.0).",
+                options: ["1.20 g", "0.747 g", "7.20 g", "0.120 g"],
+                correct: "1.20 g",
+                exp: "(4.50e22 / 6.022e23) * 16.0 = 1.195g."
+            },
+            {
+                q: "How many moles of oxygen atoms are in 0.50 mol of Ca(NO₃)₂?",
+                options: ["3.0 mol", "1.0 mol", "6.0 mol", "0.5 mol"],
+                correct: "3.0 mol",
+                exp: "Each formula unit has 6 oxygen atoms. 0.50 * 6 = 3.0 mol."
+            },
+            {
+                q: "Which contains the most sulfur by mass?",
+                options: ["SO₂", "SO₃", "H₂S", "S₈"],
+                correct: "S₈",
+                exp: "S₈ is 100% sulfur. Any compound with other elements will be less."
+            },
+
+            // --- ADVANCED REACTION RATIOS ---
+            {
+                q: "In the reaction 4NH₃ + 5O₂ -> 4NO + 6H₂O, how many moles of O₂ are needed to react with 1.2 mol NH₃?",
+                options: ["1.5 mol", "1.2 mol", "1.0 mol", "0.96 mol"],
+                correct: "1.5 mol",
+                exp: "1.2 mol NH₃ * (5 O₂ / 4 NH₃) = 1.5 mol."
+            },
+            {
+                q: "What mass of CO₂ is produced by the combustion of 1.00 mol of C₃H₈?",
+                options: ["132 g", "44 g", "88 g", "100 g"],
+                correct: "132 g",
+                exp: "C₃H₈ + 5O₂ -> 3CO₂ + 4H₂O. 1 mol C₃H₈ produces 3 mol CO₂ (3 * 44 = 132g)."
+            },
+            {
+                q: "If 10.0 g of A reacts with 10.0 g of B to form 15.0 g of C, what mass of excess reactant remains?",
+                options: ["5.0 g", "0 g", "10.0 g", "2.5 g"],
+                correct: "5.0 g",
+                exp: "Mass is conserved. 10+10=20g total in. 15g out as product, so 5g must be left over."
+            },
+            {
+                q: "How many moles of AgNO₃ are needed to react with 5.0 g of Cu? (Cu + 2AgNO₃ -> Cu(NO₃)₂ + 2Ag)",
+                options: ["0.157 mol", "0.078 mol", "0.314 mol", "0.039 mol"],
+                correct: "0.157 mol",
+                exp: "5.0g / 63.5 = 0.0787 mol Cu. Ratio is 1:2, so 0.157 mol AgNO₃."
+            },
+
+            // --- YIELD AND PURITY ---
+            {
+                q: "A 5.00 g sample of impure MgCO₃ is decomposed to give 1.10 g CO₂. What is the % purity of MgCO₃ (MM=84.3)?",
+                options: ["42.1%", "22.0%", "84.2%", "10.5%"],
+                correct: "42.1%",
+                exp: "1.10g CO₂ = 0.025 mol. Requires 0.025 mol MgCO₃ (2.107g). (2.107/5.00) = 42.1%."
+            },
+            {
+                q: "Which factor does NOT affect the theoretical yield of a reaction?",
+                options: ["The speed of the reaction", "The amount of limiting reactant", "The stoichiometry of the balanced equation", "The molar masses of reactants"],
+                correct: "The speed of the reaction",
+                exp: "Theoretical yield is a calculation based on quantity, not time/kinetics."
+            },
+
+            // --- CONCENTRATION & MIXING ---
+            {
+                q: "What is the molarity of Cl⁻ ions in a 0.20 M AlCl₃ solution?",
+                options: ["0.60 M", "0.20 M", "0.40 M", "0.10 M"],
+                correct: "0.60 M",
+                exp: "AlCl₃ -> Al³⁺ + 3Cl⁻. 0.20 M * 3 = 0.60 M."
+            },
+            {
+                q: "Mixing 100 mL of 1.0 M HCl with 100 mL of 1.0 M NaOH results in a solution with [NaCl] of:",
+                options: ["0.50 M", "1.0 M", "2.0 M", "0.25 M"],
+                correct: "0.50 M",
+                exp: "Total moles = 0.10. Total volume = 0.20 L. 0.10 / 0.20 = 0.50 M."
+            },
+            {
+                q: "If the density of 20.0% (by mass) KOH solution is 1.19 g/mL, what is its molarity (MM=56.1)?",
+                options: ["4.24 M", "3.56 M", "2.12 M", "5.10 M"],
+                correct: "4.24 M",
+                exp: "1 L = 1190g. 20% is 238g KOH. 238 / 56.1 = 4.24 M."
+            },
+
+            // --- LIMITING REACTANT: MORE PRACTICE ---
+            {
+                q: "6.0 g of H₂ reacts with 32.0 g of O₂. How much water is formed?",
+                options: ["36.0 g", "54.0 g", "18.0 g", "64.0 g"],
+                correct: "36.0 g",
+                exp: "32g O₂ is 1 mol. Produces 2 mol H₂O (36g). H₂ is in excess."
+            },
+            {
+                q: "Reacting 10.0 g Zn with 10.0 g CuCl₂. Which is the limiting reactant?",
+                options: ["CuCl₂", "Zn", "ZnCl₂", "Cu"],
+                correct: "CuCl₂",
+                exp: "10g Zn = 0.15 mol. 10g CuCl₂ = 0.074 mol. Ratio is 1:1, so CuCl₂ runs out."
+            },
+
+            // --- CHEMICAL IDENTITIES ---
+            {
+                q: "An unknown metal M forms a chloride MCl₃. If 35.5% of the compound is Cl, what is the metal?",
+                options: ["Sb", "Al", "Fe", "Ga"],
+                correct: "Sb",
+                exp: "35.5% Cl means 106.5g Cl per mol compound. If 106.5 is 35.5%, Total MM = 300. 300 - 106.5 = 193.5 (Approx Sb/Bi region)."
+            },
+            {
+                q: "A compound has empirical formula XY. If the molar mass is 3 times the empirical mass, the molecular formula is:",
+                options: ["X₃Y₃", "X₂Y₂", "XY₃", "X₃Y"],
+                correct: "X₃Y₃",
+                exp: "Multiplication factor is 3."
+            },
+
+            // --- AVOGADRO'S NUMBER APPLICATIONS ---
+            {
+                q: "How many moles of atoms are in 1.00 g of Helium?",
+                options: ["0.250 mol", "1.00 mol", "4.00 mol", "6.02 × 10²³ mol"],
+                correct: "0.250 mol",
+                exp: "1.00g / 4.00 g/mol = 0.250 mol."
+            },
+            {
+                q: "What is the mass of one atom of Gold (Au, MM=197)?",
+                options: ["3.27 × 10⁻²² g", "197 g", "6.02 × 10⁻²³ g", "1.66 × 10⁻²⁴ g"],
+                correct: "3.27 × 10⁻²² g",
+                exp: "197 / 6.022e23 = 3.27e-22g."
+            },
+            {
+                q: "How many grams of CO₂ contain the same number of molecules as 16.0 g of O₂?",
+                options: ["22.0 g", "44.0 g", "32.0 g", "16.0 g"],
+                correct: "22.0 g",
+                exp: "16g O₂ = 0.50 mol. 0.50 mol CO₂ = 22g."
+            },
+
+            // --- TITRATION PROBLEMS ---
+            {
+                q: "A 20.0 mL sample of H₂SO₄ requires 40.0 mL of 0.10 M NaOH for neutralization. What is the [H₂SO₄]?",
+                options: ["0.10 M", "0.20 M", "0.05 M", "0.40 M"],
+                correct: "0.10 M",
+                exp: "H₂SO₄ + 2NaOH. Moles NaOH = 0.004. Needs 0.002 mol H₂SO₄. 0.002 / 0.020 L = 0.10 M."
+            },
+            {
+                q: "In a titration, the point where the indicator changes color is called the:",
+                options: ["End point", "Equivalence point", "Standard point", "Neutral point"],
+                correct: "End point",
+                exp: "Equivalence point is theoretical; End point is observed."
+            },
+
+            // --- GENERAL STOICHIOMETRY TRAPS ---
+            {
+                q: "What mass of water is produced when 8.0 g of CH₄ is burned in excess oxygen?",
+                options: ["18 g", "9.0 g", "36 g", "8.0 g"],
+                correct: "18 g",
+                exp: "8g CH₄ = 0.5 mol. CH₄ + 2O₂ -> CO₂ + 2H₂O. 0.5 mol CH₄ produces 1.0 mol H₂O (18g)."
+            },
+            {
+                q: "How many moles of Al are needed to react with 1.5 moles of FeO? (2Al + 3FeO -> Al₂O₃ + 3Fe)",
+                options: ["1.0 mol", "1.5 mol", "3.0 mol", "0.75 mol"],
+                correct: "1.0 mol",
+                exp: "1.5 mol FeO * (2 Al / 3 FeO) = 1.0 mol Al."
+            },
+            {
+                q: "Which represents an empirical formula?",
+                options: ["C₃H₈", "C₂H₄", "C₆H₆", "H₂O₂"],
+                correct: "C₃H₈",
+                exp: "Empirical formulas cannot be reduced further by a common factor."
+            },
+            {
+                q: "Given 2A + 3B -> C. If you start with 4 mol A and 4 mol B, how many moles of C are formed?",
+                options: ["1.33 mol", "2.0 mol", "4.0 mol", "1.5 mol"],
+                correct: "1.33 mol",
+                exp: "B is limiting. 4 mol B * (1 C / 3 B) = 1.33 mol C."
+            },
+            {
+                q: "What is the mass of 2.00 moles of Ca(OH)₂?",
+                options: ["148 g", "74 g", "114 g", "158 g"],
+                correct: "148 g",
+                exp: "MM = 40.08 + 2(16.00 + 1.008) = 74.1. 2 * 74.1 = 148.2g."
+            },
+            {
+                q: "How many hydrogen atoms are in 1 mole of (NH₄)₂HPO₄?",
+                options: ["9", "8", "5", "4"],
+                correct: "9",
+                exp: "(2*4) + 1 = 9 hydrogen atoms per formula unit."
+            },
+            {
+                q: "If you have 100 g of each, which has the most molecules?",
+                options: ["H₂O", "CO₂", "O₂", "NH₃"],
+                correct: "H₂O",
+                exp: "Smallest molar mass = most molecules for a given mass (MM H₂O = 18)."
+            },
+            {
+                q: "What is the total mass of reactants if 15 g of product is formed with 100% yield?",
+                options: ["15 g", "More than 15 g", "Less than 15 g", "Cannot be determined"],
+                correct: "15 g",
+                exp: "Law of Conservation of Mass: Mass of reactants = Mass of products."
+            } 
         ],
 
         // 4. GAS LAWS

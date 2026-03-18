@@ -40,6 +40,20 @@
         .overlay-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; margin-bottom: 15px; }
         .close-btn { background: var(--error); color: white; border: none; padding: 5px 10px; cursor: pointer; }
     </style>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']], // This tells MathJax to look for $ symbols
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
 </head>
 <body>
 
@@ -1969,6 +1983,45 @@
                 options: ["0 kJ/mol", "100 kJ/mol", "-285 kJ/mol", "32 kJ/mol"],
                 correct: "0 kJ/mol",
                 exp: "By definition, ΔHf° for any element in its standard state is zero."
+            },
+            // --- ENTROPY & SPONTANEITY ---
+            {
+                q: "Which of the following processes results in an increase in entropy (ΔS > 0)?",
+                options: ["H2O(l) -> H2O(g)", "H2O(g) -> H2O(l)", "Ag+(aq) + Cl-(aq) -> AgCl(s)", "Freezing water"],
+                correct: "H2O(l) -> H2O(g)",
+                exp: "Gases have significantly more disorder (entropy) than liquids."
+            },
+            {
+                q: "The Second Law of Thermodynamics states that for a spontaneous process:",
+                options: ["The entropy of the universe increases", "The entropy of the system increases", "ΔG must be positive", "Energy is created"],
+                correct: "The entropy of the universe increases",
+                exp: "ΔS_univ = ΔS_sys + ΔS_surr > 0 for spontaneity."
+            },
+            {
+                q: "Under what conditions is a reaction always spontaneous?",
+                options: ["ΔH < 0, ΔS > 0", "ΔH > 0, ΔS < 0", "ΔH < 0, ΔS < 0", "ΔH > 0, ΔS > 0"],
+                correct: "ΔH < 0, ΔS > 0",
+                exp: "Exothermic reactions that increase disorder are favored at all temperatures."
+            },
+            {
+                q: "What is ΔG at equilibrium?",
+                options: ["0", "Positive", "Negative", "1"],
+                correct: "0",
+                exp: "At equilibrium, the forward and reverse rates are equal, and the system has no 'drive' in either direction."
+            },
+
+            // --- GIBBS FREE ENERGY CALCS ---
+            {
+                q: "Calculate ΔG if ΔH = -100 kJ, ΔS = -200 J/K, and T = 300 K.",
+                options: ["-40 kJ", "-160 kJ", "+40 kJ", "0 kJ"],
+                correct: "-40 kJ",
+                exp: "ΔG = ΔH - TΔS. Be careful with units! -100 kJ - (300 K * -0.200 kJ/K) = -100 + 60 = -40 kJ."
+            },
+            {
+                q: "A reaction has a positive ΔH and a positive ΔS. It will be spontaneous only at:",
+                options: ["High temperatures", "Low temperatures", "All temperatures", "Never"],
+                correct: "High temperatures",
+                exp: "The TΔS term must be large enough to outweigh the positive ΔH."
             }
         ],
 
@@ -1991,6 +2044,210 @@
                 options: ["Spontaneous", "Non-spontaneous", "At Equilibrium", "Endothermic"],
                 correct: "Spontaneous",
                 exp: "A positive cell potential corresponds to a negative Gibbs Free Energy (ΔG = -nFE)."
+            },
+            "+1"],
+                correct: "+7",
+                exp: "K is +1, O is -2. (+1) + Mn + 4(-2) = 0. Mn = +7."
+            },
+            {
+                q: "Which of the following is the 'driving force' of a voltaic cell?",
+                options: ["Electromotive Force (EMF)", "Entropy", "Enthalpy", "The salt bridge"],
+                correct: "Electromotive Force (EMF)",
+                exp: "EMF is the potential difference between the two electrodes."
+            },
+            {
+                q: "If K > 1, then ΔG° is:",
+                options: ["Negative", "Positive", "Zero", "Not enough info"],
+                correct: "Negative",
+                exp: "Relationship: ΔG° = -RT ln K. If K > 1, ln K is positive, so ΔG° is negative."
+            },
+            {
+                q: "What is the unit of electrical current?",
+                options: ["Ampere", "Volt", "Ohm", "Coulomb"],
+                correct: "Ampere",
+                exp: "Amperes measure the rate of electron flow (Coulombs per second)."
+            },
+
+            // --- CONCEPTUAL THERMO ---
+            {
+                q: "Third Law of Thermodynamics states the entropy of a perfect crystal is zero at:",
+                options: ["0 Kelvin", "0 Celsius", "25 Celsius", "273 Kelvin"],
+                correct: "0 Kelvin",
+                exp: "Absolute zero is the point of zero thermal motion."
+            },
+            {
+                q: "A reaction that is spontaneous at low temperatures but non-spontaneous at high temperatures has:",
+                options: ["-ΔH and -ΔS", "+ΔH and +ΔS", "-ΔH and +ΔS", "+ΔH and -ΔS"],
+                correct: "-ΔH and -ΔS",
+                exp: "The exothermic ΔH wins at low T, but the negative ΔS makes ΔG positive as T increases."
+            },
+            {
+                q: "ΔG° is the free energy change when reactants and products are in their:",
+                options: ["Standard states", "Liquid states", "Gaseous states", "Equilibrium states"],
+                correct: "Standard states",
+                exp: "The degree symbol (°) denotes standard conditions (1 atm, 1 M, 25°C)."
+            },
+            {
+                q: "What is the Faraday constant used for in the equation ΔG° = -nFE°?",
+                options: ["To convert voltage to energy", "To calculate temperature", "To find the number of moles", "To measure resistance"],
+                correct: "To convert voltage to energy",
+                exp: "It bridges the gap between electrical potential (Volts) and chemical energy (Joules)."
+            },
+            {
+                q: "In an electrolytic cell, the cathode is the ______ electrode.",
+                options: ["Negative", "Positive", "Neutral", "Sacrificial"],
+                correct: "Negative",
+                exp: "In electrolysis, electrons are being 'pushed' onto the cathode by an external source, making it negative."
+            },
+            {
+                q: "Which of the following is a state function?",
+                options: ["Entropy", "Heat", "Work", "Distance"],
+                correct: "Entropy",
+                exp: "State functions depend only on the current state, not the path taken."
+            },
+            {
+                q: "The work done by a voltaic cell is equal to:",
+                options: ["-ΔG", "ΔH", "TΔS", "Zero"],
+                correct: "-ΔG",
+                exp: "Free energy is the maximum amount of useful work that can be extracted from a system."
+            },
+            {
+                q: "A battery is a collection of one or more ______ cells.",
+                options: ["Voltaic", "Electrolytic", "Dry", "Resistance"],
+                correct: "Voltaic",
+                exp: "Batteries use spontaneous chemical reactions to do work."
+            },
+            {
+                q: "Corrosion of iron (rusting) is an example of an ______ process.",
+                options: ["Electrochemical", "Endothermic", "Non-spontaneous", "Acid-base"],
+                correct: "Electrochemical",
+                exp: "It involves the oxidation of iron and the reduction of oxygen."
+            },
+            {
+                q: "Standard temperature for thermodynamics is usually defined as:",
+                options: ["298.15 K", "273.15 K", "0 K", "300 K"],
+                correct: "298.15 K",
+                exp: "Standard thermodynamic tables are compiled at 25°C."
+            },
+            {
+                q: "If the reaction quotient Q increases, the cell potential E:",
+                options: ["Decreases", "Increases", "Stays the same", "Becomes E°"],
+                correct: "Decreases",
+                exp: "As products build up (higher Q), the 'drive' of the reaction decreases."
+            },
+            {
+                q: "The unit of resistance is the:",
+                options: ["Ohm", "Watt", "Farad", "Joule"],
+                correct: "Ohm",
+                exp: "Ohms measure the opposition to the flow of current."
+            },
+            {
+                q: "A sacrificial anode is used to:",
+                options: ["Prevent corrosion of another metal", "Produce high voltage", "Store energy", "Increase entropy"],
+                correct: "Prevent corrosion of another metal",
+                exp: "A more active metal (like Zinc) is attached to a less active one (like Iron) so the Zinc corrodes instead."
+            },
+            {
+                q: "ΔS is usually measured in units of:",
+                options: ["J/K", "kJ", "V", "J/mol"],
+                correct: "J/K",
+                exp: "Entropy is energy per degree of temperature."
+            },
+            {
+                q: "For a reaction where ΔG° is a large positive number, the equilibrium constant K will be:",
+                options: ["Very small", "Very large", "Exactly 1", "Negative"],
+                correct: "Very small",
+                exp: "A non-spontaneous reaction at standard states will have very few products at equilibrium."
+            },
+            {
+                q: "Which transition involves the greatest increase in entropy?",
+                options: ["Sublimation", "Melting", "Condensation", "Freezing"],
+                correct: "Sublimation",
+                exp: "Solid to gas (Sublimation) is the biggest jump in molecular disorder."
+            },
+            {
+                q: "The standard reduction potential of Li+ is -3.05 V. What is the potential for the oxidation of Li?",
+                options: ["+3.05 V", "-3.05 V", "0.00 V", "1.52 V"],
+                correct: "+3.05 V",
+                exp: "When you reverse a half-reaction, you flip the sign of the potential."
+            },
+            {
+                q: "How many electrons are transferred in the reaction: Cu + 2Ag+ -> Cu2+ + 2Ag?",
+                options: ["2", "1", "3", "0"],
+                correct: "2",
+                exp: "Copper goes from 0 to +2, losing 2 electrons. Each Ag+ gains one."
+            },
+            {
+                q: "In the Nernst equation, 'n' represents:",
+                options: ["Moles of electrons", "Moles of product", "Temperature", "Pressure"],
+                correct: "Moles of electrons",
+                exp: "It is the number of electrons exchanged in the balanced redox equation."
+            },
+            {
+                q: "The concentration of a pure solid in a Nernst calculation is treated as:",
+                options: ["1", "0", "Its density", "Its molar mass"],
+                correct: "1",
+                exp: "Pure solids and liquids are omitted from the reaction quotient Q (or assigned the value 1)."
+            },
+            {
+                q: "What happens to E°cell if you double the coefficients of the balanced equation?",
+                options: ["It stays the same", "It doubles", "It is squared", "It is halved"],
+                correct: "It stays the same",
+                exp: "Standard potential is an intensive property; it does not depend on the amount of material."
+            },
+            {
+                q: "Primary batteries differ from secondary batteries because they are:",
+                options: ["Not rechargeable", "Rechargeable", "Made of lithium", "Higher voltage"],
+                correct: "Not rechargeable",
+                exp: "Primary batteries are 'one-shot' devices."
+            },
+            {
+                q: "In the ΔG = ΔH - TΔS equation, T must be in:",
+                options: ["Kelvin", "Celsius", "Fahrenheit", "Rankine"],
+                correct: "Kelvin",
+                exp: "Absolute temperature is required for all thermodynamic calculations."
+            },
+            {
+                q: "An alkaline battery uses a paste of ______ as the electrolyte.",
+                options: ["KOH", "HCl", "NaCl", "H2SO4"],
+                correct: "KOH",
+                exp: "Hence the name 'alkaline' (basic)."
+            },
+            {
+                q: "What is the oxidation state of Oxygen in H2O2?",
+                options: ["-1", "-2", "0", "+2"],
+                correct: "-1",
+                exp: "Peroxides are a special case where oxygen is -1."
+            },
+            {
+                q: "The sign of ΔG tells us about the ______ of a reaction.",
+                options: ["Spontaneity", "Speed", "Heat change", "Mechanism"],
+                correct: "Spontaneity",
+                exp: "It tells us if a reaction *can* happen, not how fast it *will* happen."
+            },
+            {
+                q: "A concentration cell works because of a difference in ______ between the two compartments.",
+                options: ["Ion concentration", "Metal type", "Temperature", "Pressure"],
+                correct: "Ion concentration",
+                exp: "Even with the same electrodes, a potential is created by the difference in molarity."
+            },
+            {
+                q: "Standard cell potential E° is measured at a concentration of:",
+                options: ["1.0 M", "0.1 M", "Saturation", "1.0 m"],
+                correct: "1.0 M",
+                exp: "Standard state for solutions is 1 molar."
+            },
+            {
+                q: "Which thermodynamic variable is the best measure of 'disorder'?",
+                options: ["Entropy (S)", "Enthalpy (H)", "Free Energy (G)", "Internal Energy (U)"],
+                correct: "Entropy (S)",
+                exp: "Entropy is mathematically linked to the number of microstates available."
+            },
+            {
+                q: "In an electrolytic cell, the anode is the ______ electrode.",
+                options: ["Positive", "Negative", "Neutral", "Passive"],
+                correct: "Positive",
+                exp: "The external power source 'pulls' electrons away from the anode."
             }
         ],
         // 9. SOLUTION CHEMISTRY
@@ -2394,6 +2651,9 @@
         if (answeredQuestions[currentIdx]) {
             expArea.innerText = q.exp;
             expArea.style.display = 'block';
+        }
+        if (window.MathJax) {
+        MathJax.typesetPromise().catch((err) => console.log('MathJax error: ', err));
         }
     }
 

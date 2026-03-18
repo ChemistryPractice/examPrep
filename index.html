@@ -70,7 +70,7 @@
             <div id="explanation-area" class="explanation"></div>
             <div class="controls">
                 <button class="nav-nav-btn" id="prev-btn" onclick="changeQuestion(-1)">Previous</button>
-                <span id="progress-text">Question 1 of 3</span>
+                <span id="progress-text">Question 1 of 10</span>
                 <button class="nav-nav-btn" id="next-btn" onclick="changeQuestion(1)">Next</button>
             </div>
         </div>
@@ -194,10 +194,10 @@
                 exp: "E = hν. (6.626 × 10⁻³⁴)(5.0 × 10¹⁴) = 3.313 × 10⁻¹⁹ J."
             },
             {
-                q: "The work function of a metal is 4.0 eV. If light with 5.0 eV energy hits the metal, what is the KE of the ejected electron?",
+                q: "The work  of a metal is 4.0 eV. If light with 5.0 eV energy hits the metal, what is the KE of the ejected electron?",
                 options: ["1.0 eV", "4.0 eV", "9.0 eV", "0 eV"],
                 correct: "1.0 eV",
-                exp: "Photoelectric effect: KE = E(photon) - Φ(work function). 5.0 - 4.0 = 1.0 eV."
+                exp: "Photoelectric effect: KE = E(photon) - Φ(work ). 5.0 - 4.0 = 1.0 eV."
             },
 
             // --- HISTORY & MODELS ---
@@ -2357,7 +2357,7 @@
         
         // Randomize 3 questions from database
         let allQ = database[topic] || [];
-        currentQuestions = allQ.sort(() => 0.5 - Math.random()).slice(0, 5);
+        currentQuestions = allQ.sort(() => 0.5 - Math.random()).slice(0, 10);
         currentIdx = 0;
         answeredQuestions = {};
         renderQuestion();

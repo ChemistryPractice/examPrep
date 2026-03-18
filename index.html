@@ -2651,10 +2651,7 @@
         if (answeredQuestions[currentIdx]) {
             expArea.innerText = q.exp;
             expArea.style.display = 'block';
-        }
-        if (window.MathJax) {
-        MathJax.typesetPromise().catch((err) => console.log('MathJax error: ', err));
-        }
+        }       
     }
 
     function checkAnswer(choice) {

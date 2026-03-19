@@ -2663,22 +2663,32 @@
     };
    
 
-    let currentQuestions = [];
+let currentQuestions = [];
     let currentIdx = 0;
-    let answeredQuestions = {}; // To store user's choice for each question
+    let answeredQuestions = {}; 
 
-    function loadTopic(topic) {
-        // Toggle Sidebar Active state
-        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        event.target.classList.add('active');
+    // This is your 'selectCategory' function!
+    function loadTopic(topic, event) {
+        // 1. Toggle Sidebar Active state (added 'if' to prevent error on first load)
+        if (event && event.target) {
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+        }
         
-        document.getElementById('topic-title').innerText = topic.charAt(0).toUpperCase() + topic.slice(1);
+        // 2. Format the title (e.g., 'gas_laws' -> 'Gas Laws')
+        const title = topic.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        document.getElementById('topic-title').innerText = title;
         
-        // Randomize 3 questions from database
+        // 3. Randomize and pull exactly 10 questions from your 420-question database
         let allQ = database[topic] || [];
-        currentQuestions = allQ.sort(() => 0.5 - Math.random()).slice(0, 10);
+        currentQuestions = [...allQ].sort(() => 0.5 - Math.random()).slice(0, 10);
+        
+        // 4. Reset logic
         currentIdx = 0;
         answeredQuestions = {};
+        
+        // 5. Update the Score Counter and Render
+        updateScore(); // <-- Add this here!
         renderQuestion();
     }
 
@@ -2687,12 +2697,14 @@
         const qArea = document.getElementById('q-content');
         const expArea = document.getElementById('explanation-area');
         
+        // If no questions are loaded yet, exit
+        if (!q) return;
+
         expArea.style.display = 'none';
         document.getElementById('progress-text').innerText = `Question ${currentIdx + 1} of ${currentQuestions.length}`;
         document.getElementById('prev-btn').disabled = currentIdx === 0;
         document.getElementById('next-btn').disabled = currentIdx === currentQuestions.length - 1;
 
-        // Shuffle options so correct answer isn't always 'A'
         if (!q.shuffledOptions) {
             q.shuffledOptions = [...q.options].sort(() => 0.5 - Math.random());
         }
@@ -2711,14 +2723,13 @@
         qArea.innerHTML = html;
 
         if (answeredQuestions[currentIdx]) {
-            expArea.innerText = q.exp;
+            expArea.innerHTML = q.exp; // Use innerHTML so math in explanations works too
             expArea.style.display = 'block';
         }
-        // The logic to "Clear and Re-render" MathJax
+
         if (window.MathJax && window.MathJax.typesetPromise) {
-        // We wrap it in a timeout to ensure the DOM has finished updating
-        setTimeout(() => {
-            MathJax.typesetPromise().catch((err) => console.log(err));
+            setTimeout(() => {
+                MathJax.typesetPromise().catch((err) => console.log(err));
             }, 10); 
         }
     }

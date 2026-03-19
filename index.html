@@ -380,6 +380,186 @@
                 options: ["14", "12", "6", "2"],
                 correct: "14",
                 exp: "Config: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p². Total p = 6 (from 2p) + 6 (from 3p) + 2 (from 4p) = 14."
+            },
+            {
+                q: "Which set of quantum numbers ($n, l, m_l, m_s$) is NOT permissible for an electron in an atom?",
+                options: ["n=3, l=2, m_l=0, m_s=+1/2", "n=2, l=2, m_l=1, m_s=-1/2", "n=4, l=0, m_l=0, m_s=-1/2", "n=1, l=0, m_l=0, m_s=+1/2"],
+                correct: "n=2, l=2, m_l=1, m_s=-1/2",
+                exp: "The angular momentum quantum number $l$ must be less than $n$. If $n=2$, the maximum value for $l$ is 1 ($p$ orbital)."
+            },
+            {
+                q: "What is the ground-state electron configuration of the $Cr$ atom (Z=24)?",
+                options: ["[Ar] 4s² 3d⁴", "[Ar] 4s¹ 3d⁵", "[Ar] 4s² 3d⁶", "[Ar] 3d⁶"],
+                correct: "[Ar] 4s¹ 3d⁵",
+                exp: "Chromium is an exception to the Aufbau principle; a half-filled d-subshell ($d^5$) provides extra stability."
+            },
+            {
+                q: "Which element has the highest first ionization energy?",
+                options: ["He", "Ne", "Ar", "Li"],
+                correct: "He",
+                exp: "Ionization energy increases up and to the right. Helium has the highest first ionization energy of all elements."
+            },
+            {
+                q: "How many unpaired electrons are in a ground-state gaseous $Ni^{2+}$ ion?",
+                options: ["0", "2", "4", "3"],
+                correct: "2",
+                exp: "Ni is [Ar] 4s² 3d⁸. $Ni^{2+}$ loses the 4s electrons first, leaving [Ar] 3d⁸. Following Hund's rule, two electrons remain unpaired."
+            },
+            {
+                q: "Which of the following atoms has the largest atomic radius?",
+                options: ["Na", "K", "Mg", "Ca"],
+                correct: "K",
+                exp: "Atomic radius increases down a group and decreases across a period. Potassium (K) is further down than Na and further left than Ca."
+            },
+            {
+                q: "An atom has a valence shell configuration of $ns^2 np^3$. To which group does it belong?",
+                options: ["Group 13", "Group 15", "Group 17", "Group 3"],
+                correct: "Group 15",
+                exp: "The total number of valence electrons is $2 + 3 = 5$. This corresponds to Group 15 (Pnictogens)."
+            },
+            {
+                q: "Which transition in a hydrogen atom emits a photon with the longest wavelength?",
+                options: ["n=2 to n=1", "n=3 to n=2", "n=4 to n=3", "n=5 to n=4"],
+                correct: "n=5 to n=4",
+                exp: "Wavelength is inversely proportional to energy. The energy difference between shells decreases as $n$ increases; thus, n=5 to n=4 is the smallest energy jump."
+            },
+            {
+                q: "The Heisenberg Uncertainty Principle states that it is impossible to precisely know both the:",
+                options: ["Mass and Volume", "Position and Momentum", "Charge and Mass", "Energy and Time"],
+                correct: "Position and Momentum",
+                exp: "$\\Delta x \\cdot \\Delta p \\ge \\frac{h}{4\\pi}$. The more precisely position is known, the less precisely momentum can be known."
+            },
+            {
+                q: "Which ion is isoelectronic with $Ar$?",
+                options: ["$S^{2-}$", "$Na^{+}$", "$Mg^{2+}$", "$O^{2-}$"],
+                correct: "$S^{2-}$",
+                exp: "Isoelectronic means having the same number of electrons. Ar has 18 electrons; $S^{2-}$ (16 + 2) also has 18."
+            },
+            {
+                q: "What is the maximum number of electrons that can occupy the $n=3$ shell?",
+                options: ["8", "18", "32", "10"],
+                correct: "18",
+                exp: "The formula is $2n^2$. For $n=3$, $2(3)^2 = 18$ electrons ($s=2, p=6, d=10$)."
+            },
+            {
+                q: "Which species has the smallest radius?",
+                options: ["$Mg^{2+}$", "$Na^{+}$", "$Ne$", "$F^{-}$"],
+                correct: "$Mg^{2+}$",
+                exp: "These are isoelectronic. The species with the highest nuclear charge ($Mg$ with Z=12) pulls the electrons in most tightly."
+            },
+            {
+                q: "The 'plum pudding' model of the atom was proposed by:",
+                options: ["Dalton", "Thomson", "Rutherford", "Bohr"],
+                correct: "Thomson",
+                exp: "J.J. Thomson proposed the plum pudding model after discovering the electron."
+            },
+            {
+                q: "What is the wavelength of a photon (in nm) with a frequency of $6.0 \\times 10^{14}$ Hz?",
+                options: ["500 nm", "200 nm", "600 nm", "400 nm"],
+                correct: "500 nm",
+                exp: "$\\lambda = c/f$. $(3.0 \\times 10^8 / 6.0 \\times 10^{14}) = 5.0 \\times 10^{-7}$ m, which is 500 nm."
+            },
+            {
+                q: "Which orbital is defined by the quantum numbers $n=4, l=1$?",
+                options: ["4s", "4p", "4d", "4f"],
+                correct: "4p",
+                exp: "$l=0$ is s, $l=1$ is p, $l=2$ is d, and $l=3$ is f."
+            },
+            {
+                q: "How many radial nodes are present in a $3s$ orbital?",
+                options: ["0", "1", "2", "3"],
+                correct: "2",
+                exp: "Radial nodes = $n - l - 1$. For 3s: $3 - 0 - 1 = 2$."
+            },
+            {
+                q: "Which element is a metalloid?",
+                options: ["Al", "Si", "P", "S"],
+                correct: "Si",
+                exp: "Silicon (Si) is located along the 'staircase' separating metals from non-metals."
+            },
+            {
+                q: "What is the total number of orbitals in the $n=4$ shell?",
+                options: ["4", "8", "16", "32"],
+                correct: "16",
+                exp: "The number of orbitals in a shell is $n^2$. $4^2 = 16$ ($1s + 3p + 5d + 7f$)."
+            },
+            {
+                q: "Identify the element with the ground state configuration $[Kr] 5s^2 4d^{10} 5p^2$.",
+                options: ["Sn", "Pb", "Sb", "Ge"],
+                correct: "Sn",
+                exp: "Tin (Sn) is in Period 5, Group 14, following the filling of the 4d subshell."
+            },
+            {
+                q: "Which rule states that electrons occupy degenerate orbitals singly before pairing up?",
+                options: ["Pauli Exclusion Principle", "Hund's Rule", "Aufbau Principle", "Avogadro's Law"],
+                correct: "Hund's Rule",
+                exp: "Hund's Rule maximizes total spin by placing electrons in separate orbitals of the same energy first."
+            },
+            {
+                q: "What is the mass number of an isotope with 26 protons and 30 neutrons?",
+                options: ["26", "30", "56", "4"],
+                correct: "56",
+                exp: "Mass number = Protons + Neutrons ($26 + 30 = 56$)."
+            },
+            {
+                q: "Which type of electromagnetic radiation has the highest energy?",
+                options: ["Microwaves", "Infrared", "Ultraviolet", "Gamma rays"],
+                correct: "Gamma rays",
+                exp: "Gamma rays have the shortest wavelength and highest frequency, therefore the highest energy ($E=hf$)."
+            },
+            {
+                q: "An electron moves from $n=1$ to $n=3$. This process is called:",
+                options: ["Emission", "Absorption", "Ionization", "Sublimation"],
+                correct: "Absorption",
+                exp: "Moving to a higher energy level requires the absorption of energy/photons."
+            },
+            {
+                q: "Which orbital has a spherical shape?",
+                options: ["2s", "3p", "4d", "5f"],
+                correct: "2s",
+                exp: "All 's' orbitals are spherical ($l=0$)."
+            },
+            {
+                q: "The effective nuclear charge ($Z_{eff}$) experienced by valence electrons increases:",
+                options: ["Down a group", "Across a period (left to right)", "Up a group", "Both B and C"],
+                correct: "Both B and C",
+                exp: "$Z_{eff}$ increases across a period due to poor shielding by same-shell electrons and increases slightly up a group."
+            },
+            {
+                q: "How many electrons can fit in a single $d_{xy}$ orbital?",
+                options: ["2", "10", "6", "5"],
+                correct: "2",
+                exp: "Regardless of the type ($s, p, d, f$), any single orbital can hold a maximum of 2 electrons."
+            },
+            {
+                q: "Which of the following is an alkaline earth metal?",
+                options: ["Na", "Ca", "Fe", "Cs"],
+                correct: "Ca",
+                exp: "Group 2 elements (Be, Mg, Ca, Sr, Ba, Ra) are the alkaline earth metals."
+            },
+            {
+                q: "What is the charge of an alpha particle?",
+                options: ["-1", "0", "+1", "+2"],
+                correct: "+2",
+                exp: "An alpha particle is a helium nucleus ($He^{2+}$), containing 2 protons and 0 electrons."
+            },
+            {
+                q: "Which element has the lowest electronegativity?",
+                options: ["F", "Fr", "O", "H"],
+                correct: "Fr",
+                exp: "Electronegativity decreases down and to the left. Francium (Fr) is the least electronegative."
+            },
+            {
+                q: "The de Broglie wavelength of a particle is inversely proportional to its:",
+                options: ["Mass only", "Velocity only", "Momentum", "Charge"],
+                correct: "Momentum",
+                exp: "$\\lambda = h / mv$, where $mv$ is momentum ($p$)."
+            },
+            {
+                q: "Which aqueous ion is likely to be colored?",
+                options: ["$Sc^{3+}$", "$Zn^{2+}$", "$Cu^{2+}$", "$Ca^{2+}$"],
+                correct: "$Cu^{2+}$",
+                exp: "Colored ions usually have partially filled d-subshells. $Cu^{2+}$ is $d^9$, while $Sc^{3+}$ and $Zn^{2+}$ have empty or full d-shells."
             }
         ],
     

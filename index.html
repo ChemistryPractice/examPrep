@@ -2726,10 +2726,12 @@
     function checkAnswer(choice) {
         if (answeredQuestions[currentIdx]) return; // Only allow one choice
         answeredQuestions[currentIdx] = choice;
+        updateScore();
         renderQuestion();
     }
     function updateScore() {
-    let correctCount = 0;
+        if (!currentQuestions) return;
+        let correctCount = 0;
     
     // Loop through the answers we've recorded
     for (let i = 0; i < currentQuestions.length; i++) {

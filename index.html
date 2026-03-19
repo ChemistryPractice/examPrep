@@ -64,8 +64,24 @@
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 8px 0;
-}    
-    </style> 
+}
+  #quiz-container {
+    position: relative; /* This is the "anchor" for the score */
+}
+
+#score-counter {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: var(--accent);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}      
+</style> 
     <script>
         window.MathJax = {
             tex: {
@@ -119,6 +135,7 @@
 
 <div id="main-content">
     <div class="card" id="quiz-container">
+        <div id="score-counter">Score: 0/10</div> <h1 id="topic-title">Atomic Structure</h1>
         <h1 id="topic-title">Atomic Structure</h1>
         <div id="question-area">
             <div id="q-content"></div>

@@ -2728,6 +2728,23 @@
         answeredQuestions[currentIdx] = choice;
         renderQuestion();
     }
+    function updateScore() {
+    let correctCount = 0;
+    
+    // Loop through the answers we've recorded
+    for (let i = 0; i < currentQuestions.length; i++) {
+        const userAns = answeredQuestions[i];
+        const correctAns = currentQuestions[i].correct;
+        
+        if (userAns === correctAns) {
+            correctCount++;
+        }
+    }
+    
+    // Update the text on the screen
+    const scoreElement = document.getElementById('score-counter');
+    scoreElement.innerText = `Score: ${correctCount}/${currentQuestions.length}`;
+}
 
     function changeQuestion(dir) {
         currentIdx += dir;

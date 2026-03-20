@@ -1130,7 +1130,187 @@
                 options: ["15 g", "More than 15 g", "Less than 15 g", "Cannot be determined"],
                 correct: "15 g",
                 exp: "Law of Conservation of Mass: Mass of reactants = Mass of products."
-            } 
+            },
+            {
+                q: "How many moles of $Al$ are in a 27.0 g sample of Aluminum?",
+                options: ["0.50 mol", "1.00 mol", "1.50 mol", "2.00 mol"],
+                correct: "1.00 mol",
+                exp: "$n = m / M$. $27.0 \\text{ g} / 26.98 \\text{ g/mol} \\approx 1.00 \\text{ mol}$."
+            },
+            {
+                q: "How many molecules are in 2.0 moles of $H_{2}O$?",
+                options: ["$6.02 \\times 10^{23}$", "$1.20 \\times 10^{24}$", "$3.01 \\times 10^{23}$", "$1.81 \\times 10^{24}$"],
+                correct: "$1.20 \\times 10^{24}$",
+                exp: "$2.0 \\text{ mol} \\times 6.022 \\times 10^{23} \\text{ molecules/mol} = 1.20 \\times 10^{24}$."
+            },
+            {
+                q: "In the reaction $2H_{2} + O_{2} \\rightarrow 2H_{2}O$, how many moles of $O_{2}$ are needed to react with 4 moles of $H_{2}$?",
+                options: ["1 mol", "2 mol", "4 mol", "8 mol"],
+                correct: "2 mol",
+                exp: "The molar ratio is $2:1$. Therefore, 4 moles of $H_2$ require $4 / 2 = 2$ moles of $O_2$."
+            },
+            {
+                q: "What is the molar mass of Calcium Carbonate ($CaCO_{3}$)?",
+                options: ["68 g/mol", "100 g/mol", "84 g/mol", "112 g/mol"],
+                correct: "100 g/mol",
+                exp: "$Ca(40.1) + C(12.0) + 3\\times O(16.0) = 100.1 \\text{ g/mol}$."
+            },
+            {
+                q: "If 10.0 g of $H_{2}$ reacts with excess $O_{2}$, what is the theoretical yield of $H_{2}O$?",
+                options: ["45.0 g", "90.0 g", "18.0 g", "36.0 g"],
+                correct: "90.0 g",
+                exp: "$10 \\text{ g } H_2 = 5 \\text{ mol } H_2$. $5 \\text{ mol } H_2 \\rightarrow 5 \\text{ mol } H_2O$. $5 \\times 18 \\text{ g/mol} = 90 \\text{ g}$."
+            },
+            {
+                q: "Which is the limiting reactant if 2 mol of $A$ reacts with 2 mol of $B$ in the reaction $3A + B \\rightarrow C$?",
+                options: ["A", "B", "C", "Neither"],
+                correct: "A",
+                exp: "We need 3 moles of A for every 1 mole of B. Since we only have 2 moles of A, it will run out first."
+            },
+            {
+                q: "What volume of 0.500 M $HCl$ is required to neutralize 25.0 mL of 0.500 M $NaOH$?",
+                options: ["12.5 mL", "25.0 mL", "50.0 mL", "75.0 mL"],
+                correct: "25.0 mL",
+                exp: "Since the ratio is $1:1$ and the molarities are the same, the volumes must be equal ($M_1V_1 = M_2V_2$)."
+            },
+            {
+                q: "How many grams of $O$ are in 1 mole of $Mg(NO_{3})_{2}$?",
+                options: ["16 g", "48 g", "96 g", "32 g"],
+                correct: "96 g",
+                exp: "There are $2 \\times 3 = 6$ oxygen atoms per formula unit. $6 \\text{ mol } \\times 16 \\text{ g/mol} = 96 \\text{ g}$."
+            },
+            {
+                q: "A compound is 50% $S$ and 50% $O$ by mass. What is its empirical formula?",
+                options: ["$SO$", "$SO_{2}$", "$SO_{3}$", "$S_{2}O$"],
+                correct: "$SO_{2}$",
+                exp: "$50/32 = 1.56 \\text{ mol } S$; $50/16 = 3.12 \\text{ mol } O$. Ratio is $1:2$ ($SO_2$)."
+            },
+            {
+                q: "What is the percent yield if 50 g is produced but the theoretical yield was 80 g?",
+                options: ["160%", "62.5%", "37.5%", "80%"],
+                correct: "62.5%",
+                exp: "$\\text{Percent Yield} = (\\text{Actual} / \\text{Theoretical}) \\times 100 = (50/80) \\times 100 = 62.5\\%$."
+            },
+            {
+                q: "How many moles of ions are produced when 1 mole of $AlCl_{3}$ dissolves in water?",
+                options: ["1 mol", "2 mol", "3 mol", "4 mol"],
+                correct: "4 mol",
+                exp: "$AlCl_3 \\rightarrow Al^{3+} + 3Cl^{-}$. Total ions = $1 + 3 = 4$ moles."
+            },
+            {
+                q: "What is the molarity of a solution containing 0.40 moles of $NaCl$ in 500 mL of solution?",
+                options: ["0.20 M", "0.80 M", "0.40 M", "1.00 M"],
+                correct: "0.80 M",
+                exp: "$M = n / V = 0.40 \\text{ mol} / 0.500 \\text{ L} = 0.80 \\text{ M}$."
+            },
+            {
+                q: "In the reaction $N_{2} + 3H_{2} \\rightarrow 2NH_{3}$, how many grams of $H_{2}$ are needed to produce 34 g of $NH_{3}$?",
+                options: ["2.0 g", "4.0 g", "6.0 g", "12.0 g"],
+                correct: "6.0 g",
+                exp: "$34 \\text{ g } NH_3 = 2 \\text{ mol}$. Ratio $H_2:NH_3$ is $3:2$. Need 3 mol $H_2$. $3 \\times 2.0 \\text{ g/mol} = 6.0 \\text{ g}$."
+            },
+            {
+                q: "What is the mass percent of Carbon in $CH_{4}$?",
+                options: ["25%", "75%", "50%", "80%"],
+                correct: "75%",
+                exp: "$\\text{Mass % C} = (12.0 / 16.0) \\times 100 = 75\\%$."
+            },
+            {
+                q: "How many atoms of Hydrogen are in 0.5 moles of $CH_{4}$?",
+                options: ["$6.02 \\times 10^{23}$", "$1.20 \\times 10^{24}$", "$3.01 \\times 10^{23}$", "$2.41 \\times 10^{24}$"],
+                correct: "$1.20 \\times 10^{24}$",
+                exp: "$0.5 \\text{ mol } \\times 4 \\text{ H/molecule} \\times 6.02 \\times 10^{23} = 1.20 \\times 10^{24}$."
+            },
+            {
+                q: "A titration of 20.0 mL of $H_{2}SO_{4}$ requires 40.0 mL of 0.10 M $NaOH$. What is the molarity of the acid?",
+                options: ["0.10 M", "0.05 M", "0.20 M", "0.40 M"],
+                correct: "0.10 M",
+                exp: "$H_2SO_4 + 2NaOH \\rightarrow Na_2SO_4 + 2H_2O$. Moles base = 0.004. Moles acid = 0.002. $M = 0.002 / 0.020 = 0.10 \\text{ M}$."
+            },
+            {
+                q: "What is the concentration of $Cl^{-}$ ions in a 0.20 M $MgCl_{2}$ solution?",
+                options: ["0.10 M", "0.20 M", "0.40 M", "0.60 M"],
+                correct: "0.40 M",
+                exp: "$MgCl_2$ releases 2 $Cl^-$ per unit. $0.20 \\times 2 = 0.40 \\text{ M}$."
+            },
+            {
+                q: "How many grams of $AgCl$ (143.4 g/mol) can be produced from 0.10 moles of $AgNO_{3}$?",
+                options: ["14.34 g", "1.434 g", "143.4 g", "7.17 g"],
+                correct: "14.34 g",
+                exp: "1:1 ratio. $0.10 \\text{ mol} \\times 143.4 \\text{ g/mol} = 14.34 \\text{ g}$."
+            },
+            {
+                q: "Which property is used to determine the end point in an acid-base titration?",
+                options: ["Density", "Color change of an indicator", "Viscosity", "Boiling point"],
+                correct: "Color change of an indicator",
+                exp: "Indicators change color at a specific pH range, signaling that the equivalence point has been reached."
+            },
+            {
+                q: "If 4 moles of $Fe$ react with 3 moles of $O_{2}$ to form $Fe_{2}O_{3}$, what is the limiting reactant?",
+                options: ["Fe", "O2", "Both", "Neither"],
+                correct: "Both",
+                exp: "Reaction: $4Fe + 3O_2 \\rightarrow 2Fe_2O_3$. The ratio is exactly $4:3$, so both are consumed entirely."
+            },
+            {
+                q: "What is the density of a gas at STP if its molar mass is 44 g/mol?",
+                options: ["1.96 g/L", "2.00 g/L", "1.50 g/L", "1.25 g/L"],
+                correct: "1.96 g/L",
+                exp: "$D = M / 22.4$. $44 / 22.4 = 1.96 \\text{ g/L}$."
+            },
+            {
+                q: "How many moles of $CO_{2}$ are produced from the combustion of 1 mole of $C_{3}H_{8}$?",
+                options: ["1 mol", "2 mol", "3 mol", "4 mol"],
+                correct: "3 mol",
+                exp: "$C_3H_8 + 5O_2 \\rightarrow 3CO_2 + 4H_2O$. 1 mole of propane yields 3 moles of carbon dioxide."
+            },
+            {
+                q: "What is the mass of 0.250 moles of $CuSO_{4} \\cdot 5H_{2}O$ (M = 249.7 g/mol)?",
+                options: ["62.4 g", "124.8 g", "31.2 g", "249.7 g"],
+                correct: "62.4 g",
+                exp: "$0.250 \\times 249.7 = 62.4 \\text{ g}$."
+            },
+            {
+                q: "In a titration, 15.0 mL of 0.20 M $KOH$ neutralizes 30.0 mL of $HCl$. What is the $HCl$ concentration?",
+                options: ["0.10 M", "0.20 M", "0.40 M", "0.05 M"],
+                correct: "0.10 M",
+                exp: "$M_1V_1 = M_2V_2$. $(0.20 \\times 15) = (M_2 \\times 30)$. $M_2 = 3.0 / 30 = 0.10 \\text{ M}$."
+            },
+            {
+                q: "What mass of $LiF$ (25.9 g/mol) is needed to make 2.0 L of a 0.50 M solution?",
+                options: ["13.0 g", "25.9 g", "51.8 g", "10.0 g"],
+                correct: "25.9 g",
+                exp: "Moles = $M \\times V = 0.50 \\times 2.0 = 1.0 \\text{ mol}$. Mass = $1.0 \\times 25.9 = 25.9 \\text{ g}$."
+            },
+            {
+                q: "How many valence electrons are shared in a single bond between two atoms?",
+                options: ["1", "2", "4", "6"],
+                correct: "2",
+                exp: "A single covalent bond consists of one pair (2 electrons) being shared."
+            },
+            {
+                q: "If 2.5 moles of $Zn$ react with excess $HCl$, how many moles of $H_{2}$ gas are produced?",
+                options: ["1.25 mol", "2.5 mol", "5.0 mol", "0.5 mol"],
+                correct: "2.5 mol",
+                exp: "$Zn + 2HCl \\rightarrow ZnCl_2 + H_2$. The ratio $Zn:H_2$ is $1:1$."
+            },
+            {
+                q: "What is the volume of 2.0 moles of an ideal gas at STP?",
+                options: ["11.2 L", "22.4 L", "44.8 L", "5.6 L"],
+                correct: "44.8 L",
+                exp: "$2.0 \\text{ mol} \\times 22.4 \\text{ L/mol} = 44.8 \\text{ L}$."
+            },
+            {
+                q: "Which element has the highest mass percent in $H_{2}O$?",
+                options: ["Hydrogen", "Oxygen", "They are equal", "Cannot be determined"],
+                correct: "Oxygen",
+                exp: "Oxygen contributes 16.0 g out of 18.0 g total (~89%)."
+            },
+            {
+                q: "In a chemical reaction, the total mass of the reactants is always equal to the total mass of the products. This is the law of:",
+                options: ["Definite Proportions", "Multiple Proportions", "Conservation of Mass", "Ideal Gases"],
+                correct: "Conservation of Mass",
+                exp: "Mass is neither created nor destroyed in a chemical reaction."
+            }
         ],
 
         // 4. GAS LAWS

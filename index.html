@@ -3343,7 +3343,314 @@
             }
         ],
     };
-   
+
+    //10. --- NUCLEAR & ORGANIC DATABASE (50 QUESTIONS) ---
+
+[
+  // // NUCLEAR CHEMISTRY // //
+            {
+                q: "Which particle is emitted in the decay of ${}_{90}^{232}Th \\rightarrow {}_{88}^{228}Ra$?",
+                options: ["Alpha particle", "Beta particle", "Gamma ray", "Positron"],
+                correct: "Alpha particle",
+                exp: "The mass number decreases by 4 and the atomic number by 2, which corresponds to an alpha particle (${}_{2}^{4}He$)."
+            },
+            {
+                q: "The half-life of a radioisotope is 10 days. How much of a 100 g sample remains after 30 days?",
+                options: ["12.5 g", "25 g", "50 g", "33.3 g"],
+                correct: "12.5 g",
+                exp: "30 days is 3 half-lives. $100 \\rightarrow 50 \\rightarrow 25 \\rightarrow 12.5\\text{ g}$."
+            },
+            {
+                q: "Which type of radiation has the highest penetrating power?",
+                options: ["Gamma rays", "Alpha particles", "Beta particles", "Protons"],
+                correct: "Gamma rays",
+                exp: "Gamma rays are high-energy photons with no mass or charge, allowing them to pass through most materials except dense lead or concrete."
+            },
+            {
+                q: "Complete the equation: ${}_{6}^{14}C \\rightarrow {}_{7}^{14}N + ?$",
+                options: ["${}_{-1}^{0}e$", "${}_{1}^{0}e$", "${}_{2}^{4}He$", "${}_{0}^{1}n$"],
+                correct: "${}_{-1}^{0}e$",
+                exp: "This is beta decay. To balance the atomic number ($6 = 7 - 1$), a beta particle (electron) must be emitted."
+            },
+            {
+                q: "What is the process where a heavy nucleus splits into two lighter nuclei?",
+                options: ["Fission", "Fusion", "Alpha decay", "Transmutation"],
+                correct: "Fission",
+                exp: "Nuclear fission is the splitting of a heavy nucleus (like U-235) into smaller fragments, releasing energy."
+            },
+            {
+                q: "Which of the following is the symbol for a positron?",
+                options: ["${}_{+1}^{0}e$", "${}_{-1}^{0}e$", "${}_{2}^{4}He$", "${}_{0}^{0}\\gamma$"],
+                correct: "${}_{+1}^{0}e$",
+                exp: "A positron is the antimatter counterpart of an electron, with a +1 charge and zero mass number."
+            },
+            {
+                q: "The 'Binding Energy' of a nucleus is derived from the conversion of:",
+                options: ["Mass defect", "Kinetic energy", "Potential energy", "Electrons to protons"],
+                correct: "Mass defect",
+                exp: "The difference in mass between a nucleus and its individual nucleons is converted to energy via $E=mc^2$."
+            },
+            {
+                q: "Carbon-14 dating is effective for finding the age of objects up to approximately how many years?",
+                options: ["50,000 years", "5,000 years", "1,000,000 years", "500 years"],
+                correct: "50,000 years",
+                exp: "Due to its half-life of 5,730 years, C-14 levels become too low to measure accurately after about 50,000 years."
+            },
+            {
+                q: "What happens to the atomic number during electron capture?",
+                options: ["Decreases by 1", "Increases by 1", "Stays the same", "Decreases by 2"],
+                correct: "Decreases by 1",
+                exp: "An inner-shell electron combines with a proton to form a neutron, reducing the atomic number by 1."
+            },
+            {
+                q: "Which isotope is commonly used as fuel in commercial nuclear power plants?",
+                options: ["Uranium-235", "Uranium-238", "Carbon-14", "Hydrogen-3"],
+                correct: "Uranium-235",
+                exp: "U-235 is fissile, meaning it can sustain a nuclear chain reaction."
+            },
+            {
+                q: "If the rate constant $k$ for a decay is $0.0693\\text{ day}^{-1}$, what is the half-life?",
+                options: ["10 days", "5 days", "100 days", "0.693 days"],
+                correct: "10 days",
+                exp: "$t_{1/2} = 0.693 / k$. $0.693 / 0.0693 = 10$."
+            },
+            {
+                q: "Nuclear fusion occurs naturally in:",
+                options: ["The Sun", "Nuclear reactors", "The Earth's core", "Volcanoes"],
+                correct: "The Sun",
+                exp: "Stars use extreme gravity and temperature to fuse hydrogen nuclei into helium."
+            },
+            {
+                q: "Which particle has a mass number of 0 and a charge of 0?",
+                options: ["Gamma ray", "Neutron", "Proton", "Alpha particle"],
+                correct: "Gamma ray",
+                exp: "Gamma rays are electromagnetic radiation (photons) and have no rest mass or charge."
+            },
+            {
+                q: "What is the N/Z ratio (neutrons to protons) for stable light nuclei (Z < 20)?",
+                options: ["1:1", "1.5:1", "2:1", "0.5:1"],
+                correct: "1:1",
+                exp: "For light elements, a 1:1 ratio is generally required for stability."
+            },
+            {
+                q: "Which instrument is most commonly used to detect ionizing radiation?",
+                options: ["Geiger counter", "Calorimeter", "Spectrophotometer", "Barometer"],
+                correct: "Geiger counter",
+                exp: "A Geiger-Müller tube detects ions produced by radiation passing through a gas-filled chamber."
+            },
+            {
+                q: "In a nuclear equation, the sum of the mass numbers on the left must equal:",
+                options: ["The sum of mass numbers on the right", "The total number of electrons", "Zero", "The sum of atomic numbers"],
+                correct: "The sum of mass numbers on the right",
+                exp: "Law of conservation of nucleon number."
+            },
+            {
+                q: "Which decay mode is most likely for a nucleus with 'too many neutrons'?",
+                options: ["Beta decay", "Positron emission", "Alpha decay", "Electron capture"],
+                correct: "Beta decay",
+                exp: "Beta decay converts a neutron into a proton and an electron, moving the nucleus toward the band of stability."
+            },
+            {
+                q: "What is the daughter isotope when ${}_{84}^{210}Po$ undergoes alpha decay?",
+                options: ["${}_{82}^{206}Pb$", "${}_{86}^{214}Rn$", "${}_{83}^{210}Bi$", "${}_{82}^{210}Pb$"],
+                correct: "${}_{82}^{206}Pb$",
+                exp: "Mass $210 - 4 = 206$; Atomic $84 - 2 = 82$ (Lead)."
+            },
+            {
+                q: "A sample of I-131 decay from 8.0 g to 0.5 g. How many half-lives have passed?",
+                options: ["4", "3", "2", "5"],
+                correct: "4",
+                exp: "$8 \\rightarrow 4 \\rightarrow 2 \\rightarrow 1 \\rightarrow 0.5$ (4 steps)."
+            },
+            {
+                q: "Which particle is identical to a Helium-4 nucleus?",
+                options: ["Alpha particle", "Beta particle", "Gamma ray", "Deuteron"],
+                correct: "Alpha particle",
+                exp: "Alpha particles consist of 2 protons and 2 neutrons."
+            },
+            {
+                q: "Which of the following describes 'critical mass'?",
+                options: ["Minimum mass needed for a chain reaction", "The mass of a neutron", "The mass at which fusion begins", "The mass of a positron"],
+                correct: "Minimum mass needed for a chain reaction",
+                exp: "If the mass is too small, too many neutrons escape before they can cause further fission."
+            },
+            {
+                q: "Cobalt-60 is often used in medicine for:",
+                options: ["Cancer radiation therapy", "Imaging the thyroid", "Treating broken bones", "Measuring blood flow"],
+                correct: "Cancer radiation therapy",
+                exp: "Co-60 is a powerful gamma emitter used to kill malignant cells."
+            },
+            {
+                q: "During positron emission, a proton is converted into a:",
+                options: ["Neutron", "Electron", "Alpha particle", "Proton"],
+                correct: "Neutron",
+                exp: "The atomic number decreases by 1 while the mass number stays the same, as a proton becomes a neutron."
+            },
+            {
+                q: "Which force holds the protons and neutrons together in the nucleus?",
+                options: ["Strong nuclear force", "Electrostatic force", "Gravity", "Magnetic force"],
+                correct: "Strong nuclear force",
+                exp: "The strong force overcomes the electrostatic repulsion between positively charged protons."
+            },
+            {
+                q: "Which isotope of Hydrogen has 2 neutrons?",
+                options: ["Tritium", "Deuterium", "Protium", "Hydronium"],
+                correct: "Tritium",
+                exp: "Protium (0n), Deuterium (1n), Tritium (2n)."
+            },
+    
+  // // ORGANIC CHEMISTRY // //
+            {
+                q: "What is the IUPAC name for $CH_{3}CH_{2}CH_{2}OH$?",
+                options: ["1-propanol", "2-propanol", "Ethanol", "Propanal"],
+                correct: "1-propanol",
+                exp: "A three-carbon chain with an -OH group on the first carbon."
+            },
+            {
+                q: "Which functional group is present in $CH_{3}COCH_{3}$ (acetone)?",
+                options: ["Ketone", "Aldehyde", "Ether", "Ester"],
+                correct: "Ketone",
+                exp: "A carbonyl group ($C=O$) bonded to two other carbon atoms is a ketone."
+            },
+            {
+                q: "How many valence electrons does a Carbon atom have?",
+                options: ["4", "2", "6", "8"],
+                correct: "4",
+                exp: "Carbon is in Group 14 and forms four covalent bonds to satisfy its octet."
+            },
+            {
+                q: "What is the general formula for an alkane?",
+                options: ["$C_{n}H_{2n+2}$", "$C_{n}H_{2n}$", "$C_{n}H_{2n-2}$", "$C_{n}H_{n}$"],
+                correct: "$C_{n}H_{2n+2}$",
+                exp: "Alkanes are saturated hydrocarbons containing the maximum number of hydrogens."
+            },
+            {
+                q: "Which of the following compounds is an isomer of $n$-butane?",
+                options: ["Isobutane (2-methylpropane)", "Propane", "Pentane", "Cyclobutane"],
+                correct: "Isobutane (2-methylpropane)",
+                exp: "Isomers have the same molecular formula ($C_4H_{10}$) but different structural arrangements."
+            },
+            {
+                q: "What is the hybridization of carbon in ethyne ($HC \\equiv CH$)?",
+                options: ["sp", "sp²", "sp³", "sp³d"],
+                correct: "sp",
+                exp: "Carbon atoms in triple bonds are linear and use sp hybridization."
+            },
+            {
+                q: "Which functional group characterizes an organic acid?",
+                options: ["-COOH", "-OH", "-CHO", "-NH2"],
+                correct: "-COOH",
+                exp: "The carboxyl group is the identifying feature of carboxylic acids."
+            },
+            {
+                q: "What type of reaction converts an alkene into an alkane?",
+                options: ["Addition (Hydrogenation)", "Substitution", "Elimination", "Combustion"],
+                correct: "Addition (Hydrogenation)",
+                exp: "Adding $H_2$ across a double bond 'saturates' the molecule."
+            },
+            {
+                q: "Which molecule is aromatic?",
+                options: ["Benzene", "Cyclohexane", "Ethylene", "Methane"],
+                correct: "Benzene",
+                exp: "Benzene ($C_6H_6$) has a planar ring with delocalized pi electrons following Hückel's rule."
+            },
+            {
+                q: "What is the name of the functional group $-O-$?",
+                options: ["Ether", "Ester", "Alcohol", "Ketone"],
+                correct: "Ether",
+                exp: "An oxygen atom single-bonded to two carbon groups is an ether."
+            },
+            {
+                q: "How many isomers does $C_{4}H_{10}$ have?",
+                options: ["2", "3", "4", "5"],
+                correct: "2",
+                exp: "The two isomers are butane and 2-methylpropane."
+            },
+            {
+                q: "A carbon atom bonded to four different groups is called a:",
+                options: ["Chiral center (Stereocenter)", "Primary carbon", "Isomer", "Alkyne"],
+                correct: "Chiral center (Stereocenter)",
+                exp: "Chirality leads to optical isomerism (enantiomers)."
+            },
+            {
+                q: "What is the suffix for an aldehyde in IUPAC naming?",
+                options: ["-al", "-ol", "-one", "-oic acid"],
+                correct: "-al",
+                exp: "Example: Methanal, Ethanal, Propanal."
+            },
+            {
+                q: "Which of the following is an unsaturated hydrocarbon?",
+                options: ["Ethene", "Ethane", "Methane", "Propane"],
+                correct: "Ethene",
+                exp: "Unsaturated hydrocarbons contain double or triple bonds."
+            },
+            {
+                q: "What is the bond angle in a tetrahedral carbon molecule like $CH_{4}$?",
+                options: ["109.5°", "120°", "180°", "90°"],
+                correct: "109.5°",
+                exp: "sp³ hybridized carbons adopt tetrahedral geometry with angles of 109.5°."
+            },
+            {
+                q: "What type of bond is formed by the side-to-side overlap of p-orbitals?",
+                options: ["Pi ($\\pi$) bond", "Sigma ($\\sigma$) bond", "Ionic bond", "Hydrogen bond"],
+                correct: "Pi ($\\pi$) bond",
+                exp: "Double bonds consist of one sigma and one pi bond."
+            },
+            {
+                q: "What is the main component of natural gas?",
+                options: ["Methane", "Propane", "Butane", "Ethanol"],
+                correct: "Methane",
+                exp: "Methane ($CH_4$) makes up the majority of natural gas."
+            },
+            {
+                q: "Which functional group is found in an amine?",
+                options: ["$-NH_{2}$", "$-OH$", "$-CHO$", "$-COO-$"],
+                correct: "$-NH_{2}$",
+                exp: "Amines are derivatives of ammonia ($NH_3$)."
+            },
+            {
+                q: "What is the name of $CH_{3}COOCH_{2}CH_{3}$?",
+                options: ["Ethyl acetate", "Methyl propanoate", "Diethyl ether", "Propanoic acid"],
+                correct: "Ethyl acetate",
+                exp: "This is an ester formed from acetic acid and ethanol."
+            },
+            {
+                q: "Which of the following represents an alcohol?",
+                options: ["$CH_{3}CH_{2}OH$", "$CH_{3}CHO$", "$CH_{3}COOH$", "$CH_{3}OCH_{3}$"],
+                correct: "$CH_{3}CH_{2}OH$",
+                exp: "The presence of the hydroxyl group (-OH) makes it an alcohol (ethanol)."
+            },
+            {
+                q: "What is the geometry around a carbon with $sp^2$ hybridization?",
+                options: ["Trigonal Planar", "Tetrahedral", "Linear", "Bent"],
+                correct: "Trigonal Planar",
+                exp: "Found in alkenes and carbonyl groups, with 120° angles."
+            },
+            {
+                q: "Which hydrocarbon is a liquid at room temperature?",
+                options: ["Octane", "Methane", "Ethane", "Propane"],
+                correct: "Octane",
+                exp: "As the carbon chain length increases, London dispersion forces increase, raising the boiling point. $C_1-C_4$ are gases."
+            },
+            {
+                q: "The reaction of an acid and an alcohol to form an ester is called:",
+                options: ["Esterification", "Saponification", "Hydrogenation", "Fermentation"],
+                correct: "Esterification",
+                exp: "Specifically, Fischer esterification."
+            },
+            {
+                q: "How many hydrogen atoms are in a molecule of cyclohexane?",
+                options: ["12", "6", "14", "10"],
+                correct: "12",
+                exp: "Cycloalkanes follow the formula $C_nH_{2n}$. $C_6H_{12}$."
+            },
+            {
+                q: "Which prefix is used for a 5-carbon chain?",
+                options: ["Pent-", "But-", "Hex-", "Hept-"],
+                correct: "Pent-",
+                exp: "1=meth, 2=eth, 3=prop, 4=but, 5=pent."
+            }
+]
 
 let currentQuestions = [];
     let currentIdx = 0;
